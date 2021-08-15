@@ -7,6 +7,7 @@ target 'MyDay' do
 
   # Pods for MyDay
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
   target 'MyDayTests' do
     inherit! :search_paths
     # Pods for testing
