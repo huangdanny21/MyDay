@@ -11,6 +11,7 @@ target 'MyDay' do
   pod 'NVActivityIndicatorView'
   pod "CDAlertView"
   pod 'Firebase/Database'
+  pod 'GoogleSignIn'
   target 'MyDayTests' do
     inherit! :search_paths
     # Pods for testing

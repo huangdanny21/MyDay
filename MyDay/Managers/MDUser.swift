@@ -21,7 +21,7 @@ class MDUser {
     
     // MARK: - Constructor
     
-    init() {
+    private init() {
         self.handle = Auth.auth().addStateDidChangeListener { auth, firUser in
             self.user = firUser
         } as? Auth

@@ -20,4 +20,5 @@ class MyDay {
     var didCompleteTodaysTask = false
     var whatCanIDoBetterText: String?
     var whatIDidToday: String?
+    var date: Date?
 }
