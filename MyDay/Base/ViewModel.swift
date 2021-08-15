@@ -7,17 +7,13 @@
 
 import UIKit
 
-protocol BaseModel {
-    
-}
-
 protocol View {
     associatedtype ViewModelType: ViewModel
     var viewModel: ViewModelType! { get set }
 }
 
 protocol ViewModel {
-    associatedtype Model: BaseModel
+    associatedtype Model
     associatedtype CoordinatorType: Coordinate
     var model: Model? { get set }
     var coordinator: CoordinatorType? { get set }

@@ -16,9 +16,15 @@ enum SignUpErrors: Error {
 protocol SignUpService: ServiceProvider {
     func createNewUser(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback)
     func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, SignUpErrors>) -> Void)
+    func addNewUserToDB(with auth: AuthDataResult)
 }
 
 final class SignUpServiceProvider: SignUpService {
+    func addNewUserToDB(with auth: AuthDataResult) {
+        let ref = Database.database().reference()
+        ref.child("Users").child(auth.user.uid).setValue(["username": auth.user.displayName ?? auth.user.email ?? ""])
+    }
+    
     func createNewUser(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback) {
         return Auth.auth().createUser(withEmail: email, password: password, completion: completion)
     }

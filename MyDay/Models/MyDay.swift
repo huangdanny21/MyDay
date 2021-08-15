@@ -14,7 +14,7 @@ enum MoodLevel {
     case none
 }
 
-class MyDay: BaseModel{
+class MyDay {
     var numberRatings = 0
     var moodLevel = MoodLevel.none
     var didCompleteTodaysTask = false

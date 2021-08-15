@@ -16,8 +16,31 @@ final class MyDayViewController: UIViewController, StoryBoardInit, View {
     
     var viewModel: MyDayViewModel!
     
-    private lazy var service: MyDayService = {
-        return MyDayServiceProvider()
+    private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
+        let layout = UICollectionViewCompositionalLayout { [weak self]
+            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            switch Activities(rawValue: sectionIndex) {
+            case .social:
+                return MyDayCollectionViewLayout.socialSection()
+            case .hobbies:
+                return MyDayCollectionViewLayout.hobbiesSection()
+            case .sleep:
+                return MyDayCollectionViewLayout.sleepSection()
+            case .food:
+                return MyDayCollectionViewLayout.foodSection()
+            case .betterMe:
+                return MyDayCollectionViewLayout.betterMeSection()
+            case .chores:
+                return MyDayCollectionViewLayout.choresSection()
+            case .diary:
+                return MyDayCollectionViewLayout.diarySection()
+            case .media:
+                return MyDayCollectionViewLayout.mediaSection()
+            case .none:
+                return nil
+            }
+        }
+        return layout
     }()
     
     // MARK: - View Life Cycle
@@ -25,5 +48,29 @@ final class MyDayViewController: UIViewController, StoryBoardInit, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "My Day"
+        setUpCollectionView()
+    }
+    
+    // MARK: - UI
+    
+    private func setUpCollectionView() {
+        collectionView?.register(UINib(nibName: "ActivityItemCollectionCell", bundle: nil), forCellWithReuseIdentifier: ActivityItemCollectionCell.reuseIdentifier)
+//        collectionView?.delegate = self
+//        collectionView?.dataSource = self
+    }
+    
+}
+
+extension MyDayViewController: UICollectionViewDelegate {
+    
+}
+
+extension MyDayViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
     }
 }

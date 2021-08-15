@@ -31,5 +31,9 @@ final class SignUpViewModel: ViewModel {
     func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, SignUpErrors>) -> Void) {
         return service.signUpUsingGoogle(withConfiguration: configuration, parentVC: parentVC, completion: completion)
     }
+    
+    func addNewUser(withUsername authUser: AuthDataResult) {
+        service.addNewUserToDB(with: authUser)
+    }
 }
 

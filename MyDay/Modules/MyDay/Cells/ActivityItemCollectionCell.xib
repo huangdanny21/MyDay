@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActivityItemCollectionCell" id="nAP-gu-GGW" customClass="ActivityItemCollectionCell" customModule="MyDay" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zxt-52-pOr">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="N2t-ms-fUL">
+                        <rect key="frame" x="28" y="14" width="44" height="72"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="familyicon" translatesAutoresizingMaskIntoConstraints="NO" id="96b-Mm-lqe">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="96b-Mm-lqe" secondAttribute="height" multiplier="1:1" id="EHc-rp-wZP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csk-wU-hyd">
+                                <rect key="frame" x="0.0" y="54" width="44" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="N2t-ms-fUL" firstAttribute="centerX" secondItem="zxt-52-pOr" secondAttribute="centerX" id="20R-ek-cji"/>
+                    <constraint firstItem="N2t-ms-fUL" firstAttribute="centerY" secondItem="zxt-52-pOr" secondAttribute="centerY" id="hvW-t8-Lhw"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="activityIconImageView" destination="96b-Mm-lqe" id="qVM-G0-i7H"/>
+                <outlet property="activityTitleLabel" destination="csk-wU-hyd" id="TPx-bz-yxq"/>
+            </connections>
+            <point key="canvasLocation" x="316" y="178"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="familyicon" width="25" height="25"/>
+    </resources>
+</document>

@@ -18,7 +18,7 @@ class StartUpViewController: UIViewController, StoryBoardInit {
         super.viewDidLoad()
         if Auth.auth().currentUser != nil {
           // User is signed in.
-            performSegue(withIdentifier: SegueConstant.Auth.toMyDay, sender: nil)
+            performSegue(withIdentifier: SegueConstant.Auth.toHome, sender: nil)
         } else {
           // No user is signed in.
             performSegue(withIdentifier: SegueConstant.Auth.toAuthentication, sender: nil)
