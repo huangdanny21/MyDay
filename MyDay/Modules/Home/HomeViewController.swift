@@ -8,7 +8,11 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, StoryBoardInit {
+    static var storyboardName: String { return "Main" }
+    static var storyboardBundle: Bundle? { return Bundle.main }
+    static var storyboardIdentifier: String? { return "HomeViewController" }
+    
     @IBAction private func logout(withSender sender: UIButton) {
         let firebaseAuth = Auth.auth()
         do {

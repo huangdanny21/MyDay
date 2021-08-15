@@ -9,15 +9,13 @@ import UIKit
 
 extension UIApplicationDelegate {
     func goToHomePage() {
-        let homeStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = homeStoryboard.instantiateViewController(withIdentifier: "HomeViewController")
+        let viewController = HomeViewController.makeFromStoryboard()
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     func goToAuthentication() {
-        let homeStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = homeStoryboard.instantiateViewController(withIdentifier: "AuthViewController")
+        let viewController = AuthViewController.makeFromStoryboard()
         UIApplication.shared.windows.first?.rootViewController = viewController
         UIApplication.shared.windows.first?.makeKeyAndVisible()
     }

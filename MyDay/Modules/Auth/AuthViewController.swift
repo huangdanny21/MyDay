@@ -7,8 +7,11 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
-
+class AuthViewController: UIViewController, StoryBoardInit {
+    static var storyboardName: String { return "Main" }
+    static var storyboardBundle: Bundle? { return Bundle.main }
+    static var storyboardIdentifier: String? { return "AuthViewController" }
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
