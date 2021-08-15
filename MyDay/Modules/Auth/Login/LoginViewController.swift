@@ -17,4 +17,10 @@ class LoginViewController: UIViewController, ViewModelBased {
         super.viewDidLoad()
         title = "Login"
     }
+    
+    // MARK: - IBAction
+    
+    @IBAction private func login(withSender sender: UIButton) {
+        
+    }
 }

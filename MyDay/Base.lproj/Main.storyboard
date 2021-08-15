@@ -26,7 +26,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5yE-8N-udC" kind="show" identifier="toLogin" id="hMO-Jm-Uk1"/>
+                                            <segue destination="5yE-8N-udC" kind="show" identifier="toSignUp" id="hMO-Jm-Uk1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-0N-7Qq">
@@ -35,7 +35,7 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ihL-fB-Wjt" kind="show" identifier="toSignUp" id="S6f-Pr-SdM"/>
+                                            <segue destination="ihL-fB-Wjt" kind="show" identifier="toLogin" id="S6f-Pr-SdM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,21 +71,26 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Vv1-Ma-PF8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCT-a2-lV3">
-                                        <rect key="frame" x="55" y="67" width="90.5" height="34"/>
+                                        <rect key="frame" x="0.0" y="67" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="YHD-0N-Sga"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-03-EH6">
                                         <rect key="frame" x="75" y="134" width="50" height="30"/>
                                         <state key="normal" title="SignUp"/>
+                                        <connections>
+                                            <action selector="signUpWithSender:" destination="5yE-8N-udC" eventType="primaryActionTriggered" id="zS3-b1-MHt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Emq-03-EH6" firstAttribute="width" secondItem="JGZ-s2-AP9" secondAttribute="width" multiplier="0.25" id="Ckj-6Y-w0n"/>
-                                    <constraint firstItem="LCT-a2-lV3" firstAttribute="width" secondItem="JGZ-s2-AP9" secondAttribute="width" multiplier="0.4525" id="nCK-cr-2ET"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -97,6 +102,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eb8-D8-ub1"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="JGZ-s2-AP9" id="n7g-oL-tuu"/>
+                        <outlet property="passwordTextField" destination="LCT-a2-lV3" id="FXs-8o-9Qg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogE-lM-gcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

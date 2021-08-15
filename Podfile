@@ -8,6 +8,8 @@ target 'MyDay' do
   # Pods for MyDay
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'NVActivityIndicatorView'
+  pod "CDAlertView"
   target 'MyDayTests' do
     inherit! :search_paths
     # Pods for testing
