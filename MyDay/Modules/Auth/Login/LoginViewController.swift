@@ -9,8 +9,7 @@ import UIKit
 import NVActivityIndicatorView
 import CDAlertView
 
-class LoginViewController: UIViewController, ViewModelBased {
-    typealias ViewModelType = LoginViewModel
+class LoginViewController: UIViewController, View {
     var viewModel: LoginViewModel!
     
     @IBOutlet private weak var emailTextField: UITextField?

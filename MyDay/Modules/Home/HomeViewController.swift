@@ -8,7 +8,9 @@
 import UIKit
 import Firebase
 
-class HomeViewController: UIViewController, StoryBoardInit {
+class HomeViewController: UIViewController, StoryBoardInit, View {
+    var viewModel: HomeViewModel!
+    
     static var storyboardName: String { return "Main" }
     static var storyboardBundle: Bundle? { return Bundle.main }
     static var storyboardIdentifier: String? { return "HomeViewController" }

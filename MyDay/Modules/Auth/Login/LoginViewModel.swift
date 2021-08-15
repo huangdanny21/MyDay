@@ -8,8 +8,10 @@
 import Firebase
 
 final class LoginViewModel: ViewModel {
-    typealias Model = AuthCredentials
-    let credentials: Model
+    var model: AuthCredentials?
+    
+    var coordinator: LoginCoordinator?
+
     private lazy var service: LoginService = {
         return LoginServiceProvider()
     }()
@@ -17,7 +19,7 @@ final class LoginViewModel: ViewModel {
     // MARK: - Constructor
     
     init(with model: AuthCredentials = AuthCredentials()) {
-        self.credentials = model
+        self.model = model
     }
     
     // MARK: - Service

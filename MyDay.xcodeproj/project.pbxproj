@@ -19,14 +19,23 @@
 		30257E4826C8BC2800D273DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30257E4626C8BC2800D273DC /* LaunchScreen.storyboard */; };
 		30257E5326C8BC2800D273DC /* MyDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E5226C8BC2800D273DC /* MyDayTests.swift */; };
 		30257E5E26C8BC2800D273DC /* MyDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E5D26C8BC2800D273DC /* MyDayUITests.swift */; };
+		307BBDB226C9876F00D01D54 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB126C9876F00D01D54 /* HomeViewModel.swift */; };
+		307BBDB626C987C400D01D54 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB526C987C400D01D54 /* AuthViewModel.swift */; };
+		307BBDB826C987D700D01D54 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB726C987D700D01D54 /* AuthCoordinator.swift */; };
+		307BBDBA26C987EE00D01D54 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB926C987EE00D01D54 /* HomeCoordinator.swift */; };
 		308C965326C8F10E00425CDF /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965226C8F10E00425CDF /* StartUpViewController.swift */; };
 		308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965526C8F80800425CDF /* MyDayViewController.swift */; };
 		308C965826C8FA7B00425CDF /* MyDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965726C8FA7B00425CDF /* MyDay.swift */; };
 		308C965A26C8FA9100425CDF /* MyDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965926C8FA9100425CDF /* MyDayViewModel.swift */; };
 		308C965C26C8FADC00425CDF /* MyDayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965B26C8FADC00425CDF /* MyDayService.swift */; };
 		30BA9A8926C8BF0A00D14757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BA9A8826C8BF0A00D14757 /* GoogleService-Info.plist */; };
-		30C40B5426C9776B00FBE5E6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5326C9776B00FBE5E6 /* Coordinator.swift */; };
+		30C40B5426C9776B00FBE5E6 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5326C9776B00FBE5E6 /* Coordinate.swift */; };
 		30C40B5726C977A400FBE5E6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */; };
+		30C40B5926C97C7B00FBE5E6 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5826C97C7B00FBE5E6 /* App.swift */; };
+		30C40B5B26C97E0600FBE5E6 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5A26C97E0600FBE5E6 /* Application.swift */; };
+		30C40B5D26C9802A00FBE5E6 /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5C26C9802A00FBE5E6 /* SignUpCoordinator.swift */; };
+		30C40B5F26C9821900FBE5E6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5E26C9821900FBE5E6 /* LoginCoordinator.swift */; };
+		30C40B6126C984FF00FBE5E6 /* MyDayCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B6026C984FF00FBE5E6 /* MyDayCoordinator.swift */; };
 		30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */; };
 		30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */; };
 		30DCD96226C8C8F500E70EF1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96126C8C8F500E70EF1 /* LoginService.swift */; };
@@ -80,14 +89,23 @@
 		30257E5926C8BC2800D273DC /* MyDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30257E5D26C8BC2800D273DC /* MyDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayUITests.swift; sourceTree = "<group>"; };
 		30257E5F26C8BC2800D273DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		307BBDB126C9876F00D01D54 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		307BBDB526C987C400D01D54 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		307BBDB726C987D700D01D54 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		307BBDB926C987EE00D01D54 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		308C965226C8F10E00425CDF /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		308C965526C8F80800425CDF /* MyDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewController.swift; sourceTree = "<group>"; };
 		308C965726C8FA7B00425CDF /* MyDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDay.swift; sourceTree = "<group>"; };
 		308C965926C8FA9100425CDF /* MyDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewModel.swift; sourceTree = "<group>"; };
 		308C965B26C8FADC00425CDF /* MyDayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayService.swift; sourceTree = "<group>"; };
 		30BA9A8826C8BF0A00D14757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		30C40B5326C9776B00FBE5E6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30C40B5326C9776B00FBE5E6 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		30C40B5826C97C7B00FBE5E6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		30C40B5A26C97E0600FBE5E6 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		30C40B5C26C9802A00FBE5E6 /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
+		30C40B5E26C9821900FBE5E6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		30C40B6026C984FF00FBE5E6 /* MyDayCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayCoordinator.swift; sourceTree = "<group>"; };
 		30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		30DCD96126C8C8F500E70EF1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -154,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				301FACF726C8E5D400B76761 /* HomeViewController.swift */,
+				307BBDB126C9876F00D01D54 /* HomeViewModel.swift */,
+				307BBDB926C987EE00D01D54 /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -169,7 +189,6 @@
 		301FACFC26C8E6F200B76761 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				30C40B5526C9779400FBE5E6 /* Coordinators */,
 				301FACFD26C8E73300B76761 /* AppDelegateTransitionExtension.swift */,
 				308C965226C8F10E00425CDF /* StartUpViewController.swift */,
 			);
@@ -179,6 +198,7 @@
 		301FACFF26C8E7E700B76761 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				30C40B5A26C97E0600FBE5E6 /* Application.swift */,
 				301FAD0026C8E7F200B76761 /* MDUser.swift */,
 			);
 			path = Managers;
@@ -213,6 +233,7 @@
 				30257E4926C8BC2800D273DC /* Info.plist */,
 				30257E3B26C8BC2600D273DC /* AppDelegate.swift */,
 				30257E3D26C8BC2600D273DC /* SceneDelegate.swift */,
+				30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */,
 				30257E4426C8BC2800D273DC /* Assets.xcassets */,
 				30257E6B26C8BCAE00D273DC /* Base */,
 				30DCD97726C8D7AC00E70EF1 /* Constants */,
@@ -253,7 +274,7 @@
 				30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */,
 				30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */,
 				30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */,
-				30C40B5326C9776B00FBE5E6 /* Coordinator.swift */,
+				30C40B5326C9776B00FBE5E6 /* Coordinate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -298,22 +319,17 @@
 			children = (
 				308C965526C8F80800425CDF /* MyDayViewController.swift */,
 				308C965926C8FA9100425CDF /* MyDayViewModel.swift */,
+				30C40B6026C984FF00FBE5E6 /* MyDayCoordinator.swift */,
 			);
 			path = MyDay;
-			sourceTree = "<group>";
-		};
-		30C40B5526C9779400FBE5E6 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		30DCD96326C8C9A600E70EF1 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				30257E3F26C8BC2600D273DC /* AuthViewController.swift */,
+				307BBDB526C987C400D01D54 /* AuthViewModel.swift */,
+				307BBDB726C987D700D01D54 /* AuthCoordinator.swift */,
 				30DCD96526C8C9B200E70EF1 /* Login */,
 				30DCD96426C8C9AC00E70EF1 /* SignUp */,
 			);
@@ -325,6 +341,7 @@
 			children = (
 				30DCD96626C8CA7A00E70EF1 /* SignUpViewController.swift */,
 				30DCD96E26C8CD2600E70EF1 /* SignUpViewModel.swift */,
+				30C40B5C26C9802A00FBE5E6 /* SignUpCoordinator.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -334,6 +351,7 @@
 			children = (
 				30DCD96826C8CA8300E70EF1 /* LoginViewController.swift */,
 				30DCD97326C8D49C00E70EF1 /* LoginViewModel.swift */,
+				30C40B5E26C9821900FBE5E6 /* LoginCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -343,6 +361,7 @@
 			children = (
 				30DCD97526C8D4B000E70EF1 /* AuthCredentials.swift */,
 				308C965726C8FA7B00425CDF /* MyDay.swift */,
+				30C40B5826C97C7B00FBE5E6 /* App.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -615,27 +634,36 @@
 				30DCD96D26C8CC5500E70EF1 /* ViewModel.swift in Sources */,
 				308C965326C8F10E00425CDF /* StartUpViewController.swift in Sources */,
 				30C40B5726C977A400FBE5E6 /* AppCoordinator.swift in Sources */,
+				307BBDBA26C987EE00D01D54 /* HomeCoordinator.swift in Sources */,
 				308C965C26C8FADC00425CDF /* MyDayService.swift in Sources */,
 				30DCD96B26C8CC3000E70EF1 /* StoryBoardInit.swift in Sources */,
 				308C965A26C8FA9100425CDF /* MyDayViewModel.swift in Sources */,
 				30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */,
 				30DCD96726C8CA7A00E70EF1 /* SignUpViewController.swift in Sources */,
+				30C40B5D26C9802A00FBE5E6 /* SignUpCoordinator.swift in Sources */,
 				30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */,
-				30C40B5426C9776B00FBE5E6 /* Coordinator.swift in Sources */,
+				30C40B5B26C97E0600FBE5E6 /* Application.swift in Sources */,
+				30C40B5426C9776B00FBE5E6 /* Coordinate.swift in Sources */,
+				307BBDB626C987C400D01D54 /* AuthViewModel.swift in Sources */,
 				30DCD97626C8D4B000E70EF1 /* AuthCredentials.swift in Sources */,
 				30257E4026C8BC2600D273DC /* AuthViewController.swift in Sources */,
 				30DCD97A26C8D7C600E70EF1 /* SegueConstant.swift in Sources */,
+				30C40B6126C984FF00FBE5E6 /* MyDayCoordinator.swift in Sources */,
 				30DCD96926C8CA8300E70EF1 /* LoginViewController.swift in Sources */,
 				30257E3C26C8BC2600D273DC /* AppDelegate.swift in Sources */,
 				301FACFE26C8E73300B76761 /* AppDelegateTransitionExtension.swift in Sources */,
 				30DCD97426C8D49C00E70EF1 /* LoginViewModel.swift in Sources */,
 				301FACF826C8E5D400B76761 /* HomeViewController.swift in Sources */,
+				30C40B5F26C9821900FBE5E6 /* LoginCoordinator.swift in Sources */,
 				308C965826C8FA7B00425CDF /* MyDay.swift in Sources */,
 				301FAD0126C8E7F200B76761 /* MDUser.swift in Sources */,
 				308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */,
 				30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */,
 				301FACF526C8E0F800B76761 /* StringValidationExtension.swift in Sources */,
+				307BBDB826C987D700D01D54 /* AuthCoordinator.swift in Sources */,
+				30C40B5926C97C7B00FBE5E6 /* App.swift in Sources */,
 				30DCD96F26C8CD2600E70EF1 /* SignUpViewModel.swift in Sources */,
+				307BBDB226C9876F00D01D54 /* HomeViewModel.swift in Sources */,
 				30DCD96226C8C8F500E70EF1 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

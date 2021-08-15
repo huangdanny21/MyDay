@@ -19,6 +19,10 @@ class MDUser {
         }
     }
     
+    var isLoggedIn: Bool {
+        return user != nil
+    }
+    
     // MARK: - Constructor
     
     private init() {

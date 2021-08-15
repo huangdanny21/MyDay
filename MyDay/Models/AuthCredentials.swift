@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuthCredentials {
+class AuthCredentials: BaseModel {
     var email: String?
     var password: String?
 }

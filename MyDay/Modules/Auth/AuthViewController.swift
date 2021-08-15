@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AuthViewController: UIViewController, StoryBoardInit {
+class AuthViewController: UIViewController, StoryBoardInit, View {
+    var viewModel: AuthViewModel!
+    
     static var storyboardName: String { return "Main" }
     static var storyboardBundle: Bundle? { return Bundle.main }
     static var storyboardIdentifier: String? { return "AuthViewController" }

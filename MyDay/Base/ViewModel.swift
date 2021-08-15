@@ -7,17 +7,25 @@
 
 import UIKit
 
-protocol ViewModel {
-    associatedtype Model
-    init(with model: Model)
+protocol BaseModel {
+    
 }
 
-protocol ViewModelBased  {
+protocol View {
     associatedtype ViewModelType: ViewModel
     var viewModel: ViewModelType! { get set }
 }
 
-extension ViewModelBased where Self: StoryBoardInit & UIViewController {
+protocol ViewModel {
+    associatedtype Model: BaseModel
+    associatedtype CoordinatorType: Coordinate
+    var model: Model? { get set }
+    var coordinator: CoordinatorType? { get set }
+
+    init(with model: Model)
+}
+
+extension View where Self: StoryBoardInit & UIViewController {
     static func instantiateFromStoryBoard<T>(withModel model: T) -> Self
     where T == Self.ViewModelType.Model {
         var viewController = Self.makeFromStoryboard()

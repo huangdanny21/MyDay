@@ -11,13 +11,12 @@ import CDAlertView
 import GoogleSignIn
 import Firebase
 
-class SignUpViewController: UIViewController, ViewModelBased {
+class SignUpViewController: UIViewController, View {
     
     @IBOutlet private weak var emailTextField: UITextField?
     @IBOutlet private weak var passwordTextField: UITextField?
     @IBOutlet private weak var googleLoginButton: GIDSignInButton?
 
-    typealias ViewModelType = SignUpViewModel
     var viewModel: SignUpViewModel!
     
     private lazy var loadingIndicator: NVActivityIndicatorView = {

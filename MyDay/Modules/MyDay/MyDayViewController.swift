@@ -7,11 +7,10 @@
 
 import UIKit
 
-class MyDayViewController: UIViewController, ViewModelBased {
+final class MyDayViewController: UIViewController, View {
     
     @IBOutlet private weak var collectionView: UICollectionView?
     
-    typealias ViewModelType = MyDayViewModel
     var viewModel: MyDayViewModel!
     
     private lazy var service: MyDayService = {
