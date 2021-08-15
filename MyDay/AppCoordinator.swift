@@ -46,6 +46,8 @@ final class RootCoordinator: Coordinate {
             window?.rootViewController = homeViewController
         case .auth:
             window?.rootViewController = authViewController
+        case .day:
+            break
         }
     }
 }
@@ -56,5 +58,6 @@ extension RootCoordinator {
         case start
         case home
         case auth
+        case day
     }
 }

@@ -7,7 +7,10 @@
 
 import UIKit
 
-final class MyDayViewController: UIViewController, View {
+final class MyDayViewController: UIViewController, StoryBoardInit, View {
+    static var storyboardName: String { return "Main" }
+    static var storyboardBundle: Bundle? { return Bundle.main }
+    static var storyboardIdentifier: String? { return "MyDayViewController" }
     
     @IBOutlet private weak var collectionView: UICollectionView?
     
@@ -20,6 +23,7 @@ final class MyDayViewController: UIViewController, View {
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        title = "My Day"
     }
 }

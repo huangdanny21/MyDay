@@ -13,5 +13,6 @@ struct SegueConstant {
         static let toAuthentication = "toAuthentication"
         static let toSignUp = "toSignUp"
         static let toLogin = "toLogin"
+        static let toMyDay = "toMyDay"
     }
 }

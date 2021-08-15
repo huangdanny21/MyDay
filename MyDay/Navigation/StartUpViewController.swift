@@ -18,7 +18,7 @@ class StartUpViewController: UIViewController, StoryBoardInit {
         super.viewDidLoad()
         if Auth.auth().currentUser != nil {
           // User is signed in.
-            performSegue(withIdentifier: SegueConstant.Auth.toHome, sender: nil)
+            performSegue(withIdentifier: SegueConstant.Auth.toMyDay, sender: nil)
         } else {
           // No user is signed in.
             performSegue(withIdentifier: SegueConstant.Auth.toAuthentication, sender: nil)
@@ -36,6 +36,11 @@ class StartUpViewController: UIViewController, StoryBoardInit {
             coordinator.viewController = authenVC
             let viewModel = AuthViewModel(withModel: AuthCredentials(), coordinator: coordinator)
             authenVC.viewModel = viewModel
+        } else if let myDayVC = segue.destination as? MyDayViewController {
+            let coordinator = MyDayCoordinator()
+            coordinator.viewController = myDayVC
+            let viewModel = MyDayViewModel(withModel: MyDay(), coordinator: coordinator)
+            myDayVC.viewModel = viewModel
         }
     }
 }

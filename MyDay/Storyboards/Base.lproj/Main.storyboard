@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -206,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PK-ZB-WpB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="-352"/>
+            <point key="canvasLocation" x="1617" y="68"/>
         </scene>
         <!--Start Up View Controller-->
         <scene sceneID="yRh-cV-eCE">
@@ -222,6 +223,7 @@
                     <connections>
                         <segue destination="Euj-iv-Ojv" kind="show" identifier="toHome" id="hcW-p7-vl8"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toAuthentication" id="ppb-fS-cDK"/>
+                        <segue destination="94g-RF-zBS" kind="show" identifier="toMyDay" id="qZC-qy-EUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukn-1j-cIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -245,6 +247,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lkl-gT-g9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-923" y="-113"/>
+        </scene>
+        <!--My Day View Controller-->
+        <scene sceneID="z20-A0-nVK">
+            <objects>
+                <viewController storyboardIdentifier="MyDayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="94g-RF-zBS" customClass="MyDayViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gLW-OL-WCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-bh-ez6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F9e-Y0-vj8">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ta4-z5-td3">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ay3-De-jP5">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ezD-rw-EHj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jcN-bh-ez6" firstAttribute="top" secondItem="ezD-rw-EHj" secondAttribute="top" id="VA0-c8-R4r"/>
+                            <constraint firstItem="jcN-bh-ez6" firstAttribute="bottom" secondItem="ezD-rw-EHj" secondAttribute="bottom" id="jvw-Zf-ehr"/>
+                            <constraint firstItem="ezD-rw-EHj" firstAttribute="trailing" secondItem="jcN-bh-ez6" secondAttribute="trailing" id="qDn-iS-fYb"/>
+                            <constraint firstItem="jcN-bh-ez6" firstAttribute="leading" secondItem="ezD-rw-EHj" secondAttribute="leading" id="rix-dN-QmH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bUN-Ge-Ipo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kcb-U5-oGf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="-436"/>
         </scene>
     </scenes>
     <resources>

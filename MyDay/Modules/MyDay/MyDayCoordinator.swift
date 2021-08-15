@@ -10,7 +10,7 @@ import Foundation
 final class MyDayCoordinator: Coordinate {
     typealias Screen = LoginViewController
 
-    var viewController: SignUpViewController?
+    var viewController: MyDayViewController?
     
     func showScreen(_ screen: Screen) {
         

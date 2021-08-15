@@ -54,7 +54,7 @@ class LoginViewController: UIViewController, View, StoryBoardInit {
             if let err = error {
                 CDAlertView(title: "Login Error", message: err.localizedDescription, type: .notification).show()
             } else {
-                self.viewModel.coordinator?.showScreen(.home)
+                self.viewModel.coordinator?.showScreen(.day)
                 print("Log in Succeeded")
             }
         }
