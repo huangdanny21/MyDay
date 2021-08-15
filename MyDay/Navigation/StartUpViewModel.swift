@@ -15,8 +15,7 @@ final class StartUpViewModel: ViewModel {
 
     // MARK: - Constructor
     
-    init(withModel model: AuthCredentials, coordinator: StartUpCoordinator) {
-        self.model = model
-        self.coordinator = coordinator
+    init() {
+        
     }
 }

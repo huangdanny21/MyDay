@@ -6,17 +6,15 @@
 //
 
 import Foundation
-
 import Firebase
 
 final class AuthViewModel: ViewModel {
-    
     var model: AuthCredentials?
-    
     var coordinator: AuthCoordinator?
-
-    required init(withModel model: AuthCredentials, coordinator: AuthCoordinator) {
-        self.model = model
-        self.coordinator = coordinator
+    
+    // MARK: - Constructor
+    
+    init() {
+        
     }
 }

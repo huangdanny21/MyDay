@@ -14,8 +14,7 @@ final class HomeViewModel: ViewModel {
 
     // MARK: - Constructor
     
-    required init(withModel model: AuthCredentials, coordinator: HomeCoordinator) {
-        self.model = model
-        self.coordinator = coordinator
+    init() {
+        
     }
 }

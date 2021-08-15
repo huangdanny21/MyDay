@@ -8,7 +8,7 @@
 import Firebase
 import GoogleSignIn
 
-class SignUpViewModel: ViewModel {
+final class SignUpViewModel: ViewModel {
     var model: AuthCredentials?
     
     var coordinator: SignUpCoordinator?
@@ -18,7 +18,7 @@ class SignUpViewModel: ViewModel {
     
     // MARK: - Constructor
     
-    required init() {
+    init() {
         
     }
     

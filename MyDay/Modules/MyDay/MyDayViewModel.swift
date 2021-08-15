@@ -15,7 +15,7 @@ final class MyDayViewModel: ViewModel {
     
     // MARK: - consturctor
     
-    required init() {
+    init() {
         
     }
 }
