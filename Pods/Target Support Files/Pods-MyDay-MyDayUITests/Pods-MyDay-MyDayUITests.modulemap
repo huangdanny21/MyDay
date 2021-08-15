@@ -1,0 +1,6 @@
+framework module Pods_MyDay_MyDayUITests {
+  umbrella header "Pods-MyDay-MyDayUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
