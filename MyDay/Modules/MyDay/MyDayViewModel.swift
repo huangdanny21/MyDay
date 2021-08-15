@@ -8,8 +8,6 @@
 import Firebase
 
 final class MyDayViewModel: ViewModel {
-    
-    
     var model: MyDay?
     var coordinator: MyDayCoordinator?
     
