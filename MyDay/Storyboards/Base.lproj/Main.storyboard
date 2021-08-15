@@ -85,7 +85,7 @@
                                         <rect key="frame" x="75" y="134" width="50" height="30"/>
                                         <state key="normal" title="SignUp"/>
                                         <connections>
-                                            <action selector="signUpWithSender:" destination="5yE-8N-udC" eventType="primaryActionTriggered" id="zS3-b1-MHt"/>
+                                            <action selector="signUpWithSender:" destination="5yE-8N-udC" eventType="primaryActionTriggered" id="dUP-HT-bxl"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMR-uO-xog" customClass="GIDSignInButton">
@@ -94,6 +94,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Gss-r0-dcM"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="signUpWithGoogleWithSender:" destination="5yE-8N-udC" eventType="touchDownRepeat" id="W26-YG-8vP"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -111,6 +114,7 @@
                     <navigationItem key="navigationItem" id="eb8-D8-ub1"/>
                     <connections>
                         <outlet property="emailTextField" destination="JGZ-s2-AP9" id="n7g-oL-tuu"/>
+                        <outlet property="googleLoginButton" destination="rMR-uO-xog" id="Cko-Ag-ths"/>
                         <outlet property="passwordTextField" destination="LCT-a2-lV3" id="FXs-8o-9Qg"/>
                     </connections>
                 </viewController>
@@ -150,7 +154,6 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginWithSender:" destination="ihL-fB-Wjt" eventType="primaryActionTriggered" id="ydA-54-sQx"/>
-                                            <action selector="signUpWithSender:" destination="5yE-8N-udC" eventType="primaryActionTriggered" id="Xun-Tr-JAn"/>
                                         </connections>
                                     </button>
                                 </subviews>

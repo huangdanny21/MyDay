@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import GoogleSignIn
 
 class SignUpViewModel: ViewModel {
     typealias Model = AuthCredentials
@@ -25,4 +26,8 @@ class SignUpViewModel: ViewModel {
     func signUp(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback) {
         return service.createNewUser(withEmail: email, password: password, completion: completion)
     }
-}
+    
+    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, SignUpErrors>) -> Void) {
+        return service.signUpUsingGoogle(withConfiguration: configuration, parentVC: parentVC, completion: completion)
+        }
+    }

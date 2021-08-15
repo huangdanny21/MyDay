@@ -8,11 +8,14 @@
 import UIKit
 import NVActivityIndicatorView
 import CDAlertView
+import GoogleSignIn
+import Firebase
 
 class SignUpViewController: UIViewController, ViewModelBased {
     
     @IBOutlet private weak var emailTextField: UITextField?
     @IBOutlet private weak var passwordTextField: UITextField?
+    @IBOutlet private weak var googleLoginButton: GIDSignInButton?
 
     typealias ViewModelType = SignUpViewModel
     var viewModel: SignUpViewModel!
@@ -53,6 +56,22 @@ class SignUpViewController: UIViewController, ViewModelBased {
                 CDAlertView(title: "Sign up Error", message: err.localizedDescription, type: .notification).show()
             } else {
                 print("Sign Up Succeeded")
+            }
+        }
+    }
+    
+    @IBAction private func signUpWithGoogle(withSender sender: UIButton) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        viewModel.signUpUsingGoogle(withConfiguration: config, parentVC: self) { result in
+            switch result {
+            case .success(let credentials):
+                //Going to home screen
+                UIApplication.shared.delegate?.goToHomePage()
+                break
+            case .failure(let error):
+                CDAlertView(title: "Sign up Error", message: error.localizedDescription, type: .notification).show()
             }
         }
     }
