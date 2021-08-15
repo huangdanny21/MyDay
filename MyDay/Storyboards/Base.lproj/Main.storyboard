@@ -26,7 +26,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5yE-8N-udC" kind="show" identifier="toSignUp" id="hMO-Jm-Uk1"/>
+                                            <action selector="signUpWithSender:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="9vY-7X-OJQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-0N-7Qq">
@@ -35,7 +35,7 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ihL-fB-Wjt" kind="show" identifier="toLogin" id="S6f-Pr-SdM"/>
+                                            <action selector="loginWithSender:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="2e6-PB-sKm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,13 +57,13 @@
         <!--Sign Up-->
         <scene sceneID="9Gv-HT-Hel">
             <objects>
-                <viewController title="Sign Up" id="5yE-8N-udC" customClass="SignUpViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" title="Sign Up" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5yE-8N-udC" customClass="SignUpViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7FH-hF-UcN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="T65-uF-wvM">
-                                <rect key="frame" x="107" y="351.5" width="200" height="247"/>
+                                <rect key="frame" x="107" y="329.5" width="200" height="247"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGZ-s2-AP9">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -125,13 +125,13 @@
         <!--Login-->
         <scene sceneID="IIG-gd-YTK">
             <objects>
-                <viewController title="Login" id="ihL-fB-Wjt" customClass="LoginViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ihL-fB-Wjt" customClass="LoginViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OoA-kB-Whr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="njv-64-ODl">
-                                <rect key="frame" x="107" y="393" width="200" height="164"/>
+                                <rect key="frame" x="107" y="371" width="200" height="164"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XsP-qf-Jcz">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
@@ -211,7 +211,7 @@
         <!--Start Up View Controller-->
         <scene sceneID="yRh-cV-eCE">
             <objects>
-                <viewController id="ZVe-W7-6wU" customClass="StartUpViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZVe-W7-6wU" customClass="StartUpViewController" customModule="MyDay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQF-0B-QXr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

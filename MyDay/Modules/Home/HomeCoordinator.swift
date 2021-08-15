@@ -8,11 +8,27 @@
 import UIKit
 
 final class HomeCoordinator: Coordinate {
-    typealias Screen = SignUpViewController?
 
     var viewController: HomeViewController?
     
-    func showScreen(_ screen: Screen) {
-        
+    private lazy var authViewController: UIViewController = {
+        let coordinator = AuthCoordinator()
+        let vc = AuthViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        coordinator.viewController = vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
+    }()
+    
+    func showScreen(_ screen: HomeCoordinator.Screen) {
+        switch screen {
+        case .auth:
+            UIApplication.shared.windows.first?.rootViewController = authViewController
+        }
+    }
+}
+
+extension HomeCoordinator {
+    enum Screen {
+        case auth
     }
 }

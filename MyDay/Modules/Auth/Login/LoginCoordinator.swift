@@ -8,11 +8,33 @@
 import UIKit
 
 final class LoginCoordinator: Coordinate {
-    typealias Screen = SignUpViewController
 
     var viewController: LoginViewController?
     
-    func showScreen(_ screen: Screen) {
-        
+    private lazy var homeViewController: UIViewController = {
+        let coordinator = HomeCoordinator()
+        let vc = HomeViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        coordinator.viewController = vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
+    }()
+    
+    private lazy var authViewController: UIViewController = {
+        let coordinator = AuthCoordinator()
+        let vc = AuthViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        coordinator.viewController = vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
+    }()
+    
+    func showScreen(_ screen: RootCoordinator.Screen) {
+        switch screen {
+        case .auth:
+            viewController?.navigationController?.popViewController(animated: true)
+        case .home:
+            UIApplication.shared.windows.first?.rootViewController = homeViewController
+        case .start:
+            break
+        }
     }
 }

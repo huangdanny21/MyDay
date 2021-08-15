@@ -21,21 +21,29 @@ protocol ViewModel {
     associatedtype CoordinatorType: Coordinate
     var model: Model? { get set }
     var coordinator: CoordinatorType? { get set }
+    init()
+    init(withModel model: Model, coordinator: CoordinatorType)
+}
 
-    init(with model: Model)
+extension ViewModel {
+    init(withModel model: Model, coordinator: CoordinatorType) {
+        self.init()
+        self.model = model
+        self.coordinator = coordinator
+    }
 }
 
 extension View where Self: StoryBoardInit & UIViewController {
-    static func instantiateFromStoryBoard<T>(withModel model: T) -> Self
-    where T == Self.ViewModelType.Model {
+    static func instantiateFromStoryBoard<T, C>(withModel model: T, coordinator: C) -> Self
+    where T == Self.ViewModelType.Model, C == Self.ViewModelType.CoordinatorType {
         var viewController = Self.makeFromStoryboard()
-        viewController.viewModel = ViewModelType(with: model)
+        viewController.viewModel = ViewModelType(withModel: model, coordinator: coordinator)
         return viewController
     }
-    static func instantiateFromNib<T>(withModel model: T, withNibName nibName: String?, withBundle bundle: Bundle?) -> Self
-    where T == Self.ViewModelType.Model {
+    static func instantiateFromNib<T, C>(withModel model: T, coordinator: C, withNibName nibName: String?, withBundle bundle: Bundle?) -> Self
+    where T == Self.ViewModelType.Model, C == Self.ViewModelType.CoordinatorType {
         var viewController = Self.makeFromNib(withNibName: nibName, withBundle: bundle)
-        viewController.viewModel = ViewModelType(with: model)
+        viewController.viewModel = ViewModelType(withModel: model, coordinator: coordinator)
         return viewController
     }
 }

@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, StoryBoardInit, View {
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
-            UIApplication.shared.delegate?.goToAuthentication()
+            viewModel.coordinator?.showScreen(.auth)
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }

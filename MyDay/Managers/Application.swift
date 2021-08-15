@@ -18,7 +18,6 @@ final class Application {
     func root(in window: UIWindow?) {
         let coodinator = RootCoordinator()
         coodinator.window = window
-        let start = MDUser.shared.isLoggedIn ? RootCoordinator.Screen.home : RootCoordinator.Screen.auth
-        coodinator.showScreen(start)
+        coodinator.showScreen(.start)
     }
 }

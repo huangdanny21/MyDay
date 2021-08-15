@@ -16,24 +16,32 @@ final class RootCoordinator: Coordinate {
         }
     }
     
-    private lazy var homeViewController: HomeViewController = {
-        var homeVC = HomeViewController.makeFromStoryboard()
+    private lazy var homeViewController: UIViewController = {
         let coordinator = HomeCoordinator()
-        homeVC.viewModel = HomeViewModel()
-        coordinator.viewController = homeVC
-        return homeVC
+        let vc = HomeViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        coordinator.viewController = vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
     }()
     
-    private lazy var authViewController: AuthViewController = {
-        var authVC = AuthViewController.makeFromStoryboard()
+    private lazy var authViewController: UIViewController = {
         let coordinator = AuthCoordinator()
-        authVC.viewModel = AuthViewModel()
-        coordinator.viewController = authVC
-        return authVC
+        let vc = AuthViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        coordinator.viewController = vc
+        let navigationController = UINavigationController(rootViewController: vc)
+        return navigationController
+    }()
+    
+    
+    private lazy var startUpViewController: UIViewController = {
+        let navigationController = UINavigationController(rootViewController: StartUpViewController.makeFromStoryboard())
+        return navigationController
     }()
 
     func showScreen(_ screen: Screen) {
         switch screen {
+        case .start:
+            window?.rootViewController = startUpViewController
         case .home:
             window?.rootViewController = homeViewController
         case .auth:
@@ -45,6 +53,7 @@ final class RootCoordinator: Coordinate {
 // MARK: - Define Screens
 extension RootCoordinator {
     enum Screen {
+        case start
         case home
         case auth
     }

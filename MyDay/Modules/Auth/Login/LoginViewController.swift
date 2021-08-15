@@ -9,7 +9,11 @@ import UIKit
 import NVActivityIndicatorView
 import CDAlertView
 
-class LoginViewController: UIViewController, View {
+class LoginViewController: UIViewController, View, StoryBoardInit {
+    static var storyboardName: String { return "Main" }
+    static var storyboardBundle: Bundle? { return Bundle.main }
+    static var storyboardIdentifier: String? { return "LoginViewController" }
+    
     var viewModel: LoginViewModel!
     
     @IBOutlet private weak var emailTextField: UITextField?
@@ -50,7 +54,7 @@ class LoginViewController: UIViewController, View {
             if let err = error {
                 CDAlertView(title: "Login Error", message: err.localizedDescription, type: .notification).show()
             } else {
-                UIApplication.shared.delegate?.goToHomePage()
+                self.viewModel.coordinator?.showScreen(.home)
                 print("Log in Succeeded")
             }
         }

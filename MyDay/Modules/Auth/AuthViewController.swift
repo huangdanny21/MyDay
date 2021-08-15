@@ -21,12 +21,12 @@ class AuthViewController: UIViewController, StoryBoardInit, View {
         // Do any additional setup after loading the view.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == SegueConstant.Auth.toSignUp, let signUpVC = segue.destination as? SignUpViewController {
-            signUpVC.viewModel = SignUpViewModel()
-        } else if segue.identifier == SegueConstant.Auth.toLogin, let loginVC = segue.destination as? LoginViewController {
-            loginVC.viewModel = LoginViewModel()
-        }
+    @IBAction private func signUp(withSender sender: UIButton) {
+        viewModel.coordinator?.showScreen(.signUp)
+    }
+    
+    @IBAction private func login(withSender sender: UIButton) {
+        viewModel.coordinator?.showScreen(.login)
     }
 }
 

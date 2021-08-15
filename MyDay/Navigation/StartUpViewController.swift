@@ -8,7 +8,12 @@
 import UIKit
 import Firebase
 
-class StartUpViewController: UIViewController {
+class StartUpViewController: UIViewController, StoryBoardInit {
+    
+    static var storyboardName: String { return "Main" }
+    static var storyboardBundle: Bundle? { return Bundle.main }
+    static var storyboardIdentifier: String? { return "StartUpViewController" }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if Auth.auth().currentUser != nil {
@@ -17,6 +22,20 @@ class StartUpViewController: UIViewController {
         } else {
           // No user is signed in.
             performSegue(withIdentifier: SegueConstant.Auth.toAuthentication, sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let homeVC = segue.destination as? HomeViewController {
+            let coordinator = HomeCoordinator()
+            coordinator.viewController = homeVC
+            let viewModel = HomeViewModel(withModel: AuthCredentials(), coordinator: coordinator)
+            homeVC.viewModel = viewModel
+        } else if let authenVC = segue.destination as? AuthViewController {
+            let coordinator = AuthCoordinator()
+            coordinator.viewController = authenVC
+            let viewModel = AuthViewModel(withModel: AuthCredentials(), coordinator: coordinator)
+            authenVC.viewModel = viewModel
         }
     }
 }

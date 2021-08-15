@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		301FACF526C8E0F800B76761 /* StringValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FACF426C8E0F800B76761 /* StringValidationExtension.swift */; };
 		301FACF826C8E5D400B76761 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FACF726C8E5D400B76761 /* HomeViewController.swift */; };
-		301FACFE26C8E73300B76761 /* AppDelegateTransitionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FACFD26C8E73300B76761 /* AppDelegateTransitionExtension.swift */; };
 		301FAD0126C8E7F200B76761 /* MDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FAD0026C8E7F200B76761 /* MDUser.swift */; };
 		30257E3C26C8BC2600D273DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E3B26C8BC2600D273DC /* AppDelegate.swift */; };
 		30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E3D26C8BC2600D273DC /* SceneDelegate.swift */; };
@@ -23,6 +22,8 @@
 		307BBDB626C987C400D01D54 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB526C987C400D01D54 /* AuthViewModel.swift */; };
 		307BBDB826C987D700D01D54 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB726C987D700D01D54 /* AuthCoordinator.swift */; };
 		307BBDBA26C987EE00D01D54 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB926C987EE00D01D54 /* HomeCoordinator.swift */; };
+		307BBDBC26C9964800D01D54 /* StartUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDBB26C9964800D01D54 /* StartUpViewModel.swift */; };
+		307BBDBE26C9965500D01D54 /* StartUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDBD26C9965500D01D54 /* StartUpCoordinator.swift */; };
 		308C965326C8F10E00425CDF /* StartUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965226C8F10E00425CDF /* StartUpViewController.swift */; };
 		308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965526C8F80800425CDF /* MyDayViewController.swift */; };
 		308C965826C8FA7B00425CDF /* MyDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965726C8FA7B00425CDF /* MyDay.swift */; };
@@ -73,7 +74,6 @@
 		04B58AB76A2166C68F75D80F /* Pods-MyDay-MyDayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDay-MyDayUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyDay-MyDayUITests/Pods-MyDay-MyDayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		301FACF426C8E0F800B76761 /* StringValidationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidationExtension.swift; sourceTree = "<group>"; };
 		301FACF726C8E5D400B76761 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		301FACFD26C8E73300B76761 /* AppDelegateTransitionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTransitionExtension.swift; sourceTree = "<group>"; };
 		301FAD0026C8E7F200B76761 /* MDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDUser.swift; sourceTree = "<group>"; };
 		30257E3826C8BC2600D273DC /* MyDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30257E3B26C8BC2600D273DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		307BBDB526C987C400D01D54 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		307BBDB726C987D700D01D54 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		307BBDB926C987EE00D01D54 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		307BBDBB26C9964800D01D54 /* StartUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewModel.swift; sourceTree = "<group>"; };
+		307BBDBD26C9965500D01D54 /* StartUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpCoordinator.swift; sourceTree = "<group>"; };
 		308C965226C8F10E00425CDF /* StartUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartUpViewController.swift; sourceTree = "<group>"; };
 		308C965526C8F80800425CDF /* MyDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewController.swift; sourceTree = "<group>"; };
 		308C965726C8FA7B00425CDF /* MyDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDay.swift; sourceTree = "<group>"; };
@@ -189,8 +191,9 @@
 		301FACFC26C8E6F200B76761 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				301FACFD26C8E73300B76761 /* AppDelegateTransitionExtension.swift */,
 				308C965226C8F10E00425CDF /* StartUpViewController.swift */,
+				307BBDBB26C9964800D01D54 /* StartUpViewModel.swift */,
+				307BBDBD26C9965500D01D54 /* StartUpCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -651,11 +654,12 @@
 				30C40B6126C984FF00FBE5E6 /* MyDayCoordinator.swift in Sources */,
 				30DCD96926C8CA8300E70EF1 /* LoginViewController.swift in Sources */,
 				30257E3C26C8BC2600D273DC /* AppDelegate.swift in Sources */,
-				301FACFE26C8E73300B76761 /* AppDelegateTransitionExtension.swift in Sources */,
 				30DCD97426C8D49C00E70EF1 /* LoginViewModel.swift in Sources */,
 				301FACF826C8E5D400B76761 /* HomeViewController.swift in Sources */,
 				30C40B5F26C9821900FBE5E6 /* LoginCoordinator.swift in Sources */,
 				308C965826C8FA7B00425CDF /* MyDay.swift in Sources */,
+				307BBDBC26C9964800D01D54 /* StartUpViewModel.swift in Sources */,
+				307BBDBE26C9965500D01D54 /* StartUpCoordinator.swift in Sources */,
 				301FAD0126C8E7F200B76761 /* MDUser.swift in Sources */,
 				308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */,
 				30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */,

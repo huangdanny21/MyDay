@@ -1,20 +1,21 @@
 //
-//  HomeViewModel.swift
+//  StartUpViewModel.swift
 //  MyDay
 //
 //  Created by Danny Huang on 8/15/21.
 //
 
-import Foundation
+
 import Firebase
 
-final class HomeViewModel: ViewModel {
+final class StartUpViewModel: ViewModel {
     var model: AuthCredentials?
-    var coordinator: HomeCoordinator?
+    
+    var coordinator: StartUpCoordinator?
 
     // MARK: - Constructor
     
-    required init(withModel model: AuthCredentials, coordinator: HomeCoordinator) {
+    init(withModel model: AuthCredentials, coordinator: StartUpCoordinator) {
         self.model = model
         self.coordinator = coordinator
     }

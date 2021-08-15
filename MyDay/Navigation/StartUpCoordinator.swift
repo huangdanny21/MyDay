@@ -1,17 +1,18 @@
 //
-//  SignUpCoordinator.swift
+//  StartUpCoordinator.swift
 //  MyDay
 //
 //  Created by Danny Huang on 8/15/21.
 //
 
-import UIKit
+import Firebase
 
-final class SignUpCoordinator: Coordinate {
+final class StartUpCoordinator: Coordinate {
 
-    var viewController: SignUpViewController?
+    var viewController: StartUpViewController?
     
     func showScreen(_ screen: RootCoordinator.Screen) {
         
     }
 }
+

@@ -18,8 +18,8 @@ class SignUpViewModel: ViewModel {
     
     // MARK: - Constructor
     
-    required init(with model: AuthCredentials = AuthCredentials()) {
-        self.model = model
+    required init() {
+        
     }
     
     // MARK: - Service

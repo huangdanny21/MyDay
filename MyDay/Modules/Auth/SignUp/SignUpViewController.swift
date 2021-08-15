@@ -11,7 +11,12 @@ import CDAlertView
 import GoogleSignIn
 import Firebase
 
-class SignUpViewController: UIViewController, View {
+class SignUpViewController: UIViewController, StoryBoardInit ,View {
+    
+    static var storyboardName: String { return "Main" }
+    static var storyboardBundle: Bundle? { return Bundle.main }
+    static var storyboardIdentifier: String? { return "SignUpViewController" }
+    
     
     @IBOutlet private weak var emailTextField: UITextField?
     @IBOutlet private weak var passwordTextField: UITextField?
@@ -55,6 +60,7 @@ class SignUpViewController: UIViewController, View {
                 CDAlertView(title: "Sign up Error", message: err.localizedDescription, type: .notification).show()
             } else {
                 print("Sign Up Succeeded")
+                self.viewModel.coordinator?.showScreen(RootCoordinator.Screen.home)
             }
         }
     }
@@ -67,7 +73,7 @@ class SignUpViewController: UIViewController, View {
             switch result {
             case .success(let credentials):
                 //Going to home screen
-                UIApplication.shared.delegate?.goToHomePage()
+                self.viewModel.coordinator?.showScreen(RootCoordinator.Screen.home)
                 break
             case .failure(let error):
                 CDAlertView(title: "Sign up Error", message: error.localizedDescription, type: .notification).show()
