@@ -10,7 +10,7 @@ import Firebase
 class MyDayViewModel: ViewModel {
     typealias Model = MyDay
     private var myDay: MyDay
-    required init(with model: MyDay) {
+    required init(with model: MyDay = MyDay()) {
         self.myDay = model
     }
 }

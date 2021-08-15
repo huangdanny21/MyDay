@@ -18,4 +18,6 @@ class MyDay {
     var numberRatings = 0
     var moodLevel = MoodLevel.none
     var didCompleteTodaysTask = false
+    var whatCanIDoBetterText: String?
+    var whatIDidToday: String?
 }

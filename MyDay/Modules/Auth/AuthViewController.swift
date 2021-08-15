@@ -21,9 +21,9 @@ class AuthViewController: UIViewController, StoryBoardInit {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == SegueConstant.Auth.toSignUp, let signUpVC = segue.destination as? SignUpViewController {
-            signUpVC.viewModel = SignUpViewModel(with: AuthCredentials())
+            signUpVC.viewModel = SignUpViewModel()
         } else if segue.identifier == SegueConstant.Auth.toLogin, let loginVC = segue.destination as? LoginViewController {
-            loginVC.viewModel = LoginViewModel(with: AuthCredentials())
+            loginVC.viewModel = LoginViewModel()
         }
     }
 }

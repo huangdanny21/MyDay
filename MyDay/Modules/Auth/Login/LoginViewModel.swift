@@ -16,7 +16,7 @@ final class LoginViewModel: ViewModel {
 
     // MARK: - Constructor
     
-    init(with model: AuthCredentials) {
+    init(with model: AuthCredentials = AuthCredentials()) {
         self.credentials = model
     }
     
