@@ -3,19 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30257E3C26C8BC2600D273DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E3B26C8BC2600D273DC /* AppDelegate.swift */; };
 		30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E3D26C8BC2600D273DC /* SceneDelegate.swift */; };
-		30257E4026C8BC2600D273DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E3F26C8BC2600D273DC /* ViewController.swift */; };
+		30257E4026C8BC2600D273DC /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E3F26C8BC2600D273DC /* AuthViewController.swift */; };
 		30257E4326C8BC2600D273DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30257E4126C8BC2600D273DC /* Main.storyboard */; };
 		30257E4526C8BC2800D273DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30257E4426C8BC2800D273DC /* Assets.xcassets */; };
 		30257E4826C8BC2800D273DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30257E4626C8BC2800D273DC /* LaunchScreen.storyboard */; };
 		30257E5326C8BC2800D273DC /* MyDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E5226C8BC2800D273DC /* MyDayTests.swift */; };
 		30257E5E26C8BC2800D273DC /* MyDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E5D26C8BC2800D273DC /* MyDayUITests.swift */; };
 		30BA9A8926C8BF0A00D14757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BA9A8826C8BF0A00D14757 /* GoogleService-Info.plist */; };
+		30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */; };
+		30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */; };
+		30DCD96226C8C8F500E70EF1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96126C8C8F500E70EF1 /* LoginService.swift */; };
+		30DCD96726C8CA7A00E70EF1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96626C8CA7A00E70EF1 /* SignUpViewController.swift */; };
+		30DCD96926C8CA8300E70EF1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96826C8CA8300E70EF1 /* LoginViewController.swift */; };
+		30DCD96B26C8CC3000E70EF1 /* StoryBoardInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */; };
+		30DCD96D26C8CC5500E70EF1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */; };
+		30DCD96F26C8CD2600E70EF1 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96E26C8CD2600E70EF1 /* SignUpViewModel.swift */; };
+		30DCD97426C8D49C00E70EF1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD97326C8D49C00E70EF1 /* LoginViewModel.swift */; };
+		30DCD97626C8D4B000E70EF1 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD97526C8D4B000E70EF1 /* AuthCredentials.swift */; };
+		30DCD97A26C8D7C600E70EF1 /* SegueConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD97926C8D7C600E70EF1 /* SegueConstant.swift */; };
 		32CD795907646394246BCDE9 /* Pods_MyDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED5925A9B1BECF208F47E4 /* Pods_MyDay.framework */; };
 		389CB6E23AC87CB9BDCAEE7B /* Pods_MyDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15759E44BE64416AF814D80 /* Pods_MyDayTests.framework */; };
 		8B41679EC0C1CA683C6404ED /* Pods_MyDay_MyDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8AB75DF6D07F696F4387E /* Pods_MyDay_MyDayUITests.framework */; };
@@ -43,7 +54,7 @@
 		30257E3826C8BC2600D273DC /* MyDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30257E3B26C8BC2600D273DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30257E3D26C8BC2600D273DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		30257E3F26C8BC2600D273DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30257E3F26C8BC2600D273DC /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		30257E4226C8BC2600D273DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30257E4426C8BC2800D273DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30257E4726C8BC2800D273DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +66,17 @@
 		30257E5D26C8BC2800D273DC /* MyDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayUITests.swift; sourceTree = "<group>"; };
 		30257E5F26C8BC2800D273DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30BA9A8826C8BF0A00D14757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		30DCD96126C8C8F500E70EF1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		30DCD96626C8CA7A00E70EF1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		30DCD96826C8CA8300E70EF1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardInit.swift; sourceTree = "<group>"; };
+		30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		30DCD96E26C8CD2600E70EF1 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		30DCD97326C8D49C00E70EF1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		30DCD97526C8D4B000E70EF1 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
+		30DCD97926C8D7C600E70EF1 /* SegueConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueConstant.swift; sourceTree = "<group>"; };
 		38D8AB75DF6D07F696F4387E /* Pods_MyDay_MyDayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDay_MyDayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCFFD7052B99286B8BB7649 /* Pods-MyDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDay.debug.xcconfig"; path = "Target Support Files/Pods-MyDay/Pods-MyDay.debug.xcconfig"; sourceTree = "<group>"; };
 		42ED5925A9B1BECF208F47E4 /* Pods_MyDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +125,6 @@
 				7359A1767DEBCE785801976D /* Pods-MyDayTests.debug.xcconfig */,
 				5824E41E2B61332A56ED4008 /* Pods-MyDayTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,6 +153,8 @@
 		30257E3A26C8BC2600D273DC /* MyDay */ = {
 			isa = PBXGroup;
 			children = (
+				30DCD97726C8D7AC00E70EF1 /* Constants */,
+				30DCD97026C8CE7900E70EF1 /* Models */,
 				30257E7026C8BD8800D273DC /* Services */,
 				30257E6F26C8BD8000D273DC /* Extensions */,
 				30257E6E26C8BCF400D273DC /* Modules */,
@@ -139,7 +162,6 @@
 				30257E6B26C8BCAE00D273DC /* Base */,
 				30257E3B26C8BC2600D273DC /* AppDelegate.swift */,
 				30257E3D26C8BC2600D273DC /* SceneDelegate.swift */,
-				30257E3F26C8BC2600D273DC /* ViewController.swift */,
 				30257E4126C8BC2600D273DC /* Main.storyboard */,
 				30257E4426C8BC2800D273DC /* Assets.xcassets */,
 				30257E4626C8BC2800D273DC /* LaunchScreen.storyboard */,
@@ -170,6 +192,9 @@
 		30257E6B26C8BCAE00D273DC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */,
+				30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */,
+				30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -184,6 +209,7 @@
 		30257E6E26C8BCF400D273DC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				30DCD96326C8C9A600E70EF1 /* Auth */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -198,8 +224,62 @@
 		30257E7026C8BD8800D273DC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */,
+				30DCD96126C8C8F500E70EF1 /* LoginService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		30DCD96326C8C9A600E70EF1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				30257E3F26C8BC2600D273DC /* AuthViewController.swift */,
+				30DCD96526C8C9B200E70EF1 /* Login */,
+				30DCD96426C8C9AC00E70EF1 /* SignUp */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		30DCD96426C8C9AC00E70EF1 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				30DCD96626C8CA7A00E70EF1 /* SignUpViewController.swift */,
+				30DCD96E26C8CD2600E70EF1 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		30DCD96526C8C9B200E70EF1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				30DCD96826C8CA8300E70EF1 /* LoginViewController.swift */,
+				30DCD97326C8D49C00E70EF1 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		30DCD97026C8CE7900E70EF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30DCD97526C8D4B000E70EF1 /* AuthCredentials.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30DCD97726C8D7AC00E70EF1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				30DCD97826C8D7B300E70EF1 /* Segue */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		30DCD97826C8D7B300E70EF1 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				30DCD97926C8D7C600E70EF1 /* SegueConstant.swift */,
+			);
+			path = Segue;
 			sourceTree = "<group>";
 		};
 		AAB11D52F32694CB8FE99982 /* Frameworks */ = {
@@ -451,9 +531,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30257E4026C8BC2600D273DC /* ViewController.swift in Sources */,
+				30DCD96D26C8CC5500E70EF1 /* ViewModel.swift in Sources */,
+				30DCD96B26C8CC3000E70EF1 /* StoryBoardInit.swift in Sources */,
+				30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */,
+				30DCD96726C8CA7A00E70EF1 /* SignUpViewController.swift in Sources */,
+				30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */,
+				30DCD97626C8D4B000E70EF1 /* AuthCredentials.swift in Sources */,
+				30257E4026C8BC2600D273DC /* AuthViewController.swift in Sources */,
+				30DCD97A26C8D7C600E70EF1 /* SegueConstant.swift in Sources */,
+				30DCD96926C8CA8300E70EF1 /* LoginViewController.swift in Sources */,
 				30257E3C26C8BC2600D273DC /* AppDelegate.swift in Sources */,
+				30DCD97426C8D49C00E70EF1 /* LoginViewModel.swift in Sources */,
 				30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */,
+				30DCD96F26C8CD2600E70EF1 /* SignUpViewModel.swift in Sources */,
+				30DCD96226C8C8F500E70EF1 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
