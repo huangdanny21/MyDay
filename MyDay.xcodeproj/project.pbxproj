@@ -25,6 +25,8 @@
 		308C965A26C8FA9100425CDF /* MyDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965926C8FA9100425CDF /* MyDayViewModel.swift */; };
 		308C965C26C8FADC00425CDF /* MyDayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308C965B26C8FADC00425CDF /* MyDayService.swift */; };
 		30BA9A8926C8BF0A00D14757 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30BA9A8826C8BF0A00D14757 /* GoogleService-Info.plist */; };
+		30C40B5426C9776B00FBE5E6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5326C9776B00FBE5E6 /* Coordinator.swift */; };
+		30C40B5726C977A400FBE5E6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */; };
 		30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */; };
 		30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */; };
 		30DCD96226C8C8F500E70EF1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96126C8C8F500E70EF1 /* LoginService.swift */; };
@@ -84,6 +86,8 @@
 		308C965926C8FA9100425CDF /* MyDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayViewModel.swift; sourceTree = "<group>"; };
 		308C965B26C8FADC00425CDF /* MyDayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayService.swift; sourceTree = "<group>"; };
 		30BA9A8826C8BF0A00D14757 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30C40B5326C9776B00FBE5E6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		30DCD96126C8C8F500E70EF1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		301FACFC26C8E6F200B76761 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				30C40B5526C9779400FBE5E6 /* Coordinators */,
 				301FACFD26C8E73300B76761 /* AppDelegateTransitionExtension.swift */,
 				308C965226C8F10E00425CDF /* StartUpViewController.swift */,
 			);
@@ -248,6 +253,7 @@
 				30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */,
 				30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */,
 				30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */,
+				30C40B5326C9776B00FBE5E6 /* Coordinator.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -294,6 +300,14 @@
 				308C965926C8FA9100425CDF /* MyDayViewModel.swift */,
 			);
 			path = MyDay;
+			sourceTree = "<group>";
+		};
+		30C40B5526C9779400FBE5E6 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				30C40B5626C977A400FBE5E6 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		30DCD96326C8C9A600E70EF1 /* Auth */ = {
@@ -600,12 +614,14 @@
 			files = (
 				30DCD96D26C8CC5500E70EF1 /* ViewModel.swift in Sources */,
 				308C965326C8F10E00425CDF /* StartUpViewController.swift in Sources */,
+				30C40B5726C977A400FBE5E6 /* AppCoordinator.swift in Sources */,
 				308C965C26C8FADC00425CDF /* MyDayService.swift in Sources */,
 				30DCD96B26C8CC3000E70EF1 /* StoryBoardInit.swift in Sources */,
 				308C965A26C8FA9100425CDF /* MyDayViewModel.swift in Sources */,
 				30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */,
 				30DCD96726C8CA7A00E70EF1 /* SignUpViewController.swift in Sources */,
 				30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */,
+				30C40B5426C9776B00FBE5E6 /* Coordinator.swift in Sources */,
 				30DCD97626C8D4B000E70EF1 /* AuthCredentials.swift in Sources */,
 				30257E4026C8BC2600D273DC /* AuthViewController.swift in Sources */,
 				30DCD97A26C8D7C600E70EF1 /* SegueConstant.swift in Sources */,
