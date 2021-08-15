@@ -11,6 +11,8 @@
 		300C599626C9BE8A0028667A /* ActivityItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599526C9BE8A0028667A /* ActivityItemCollectionCell.swift */; };
 		300C599826C9BEA20028667A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599726C9BEA20028667A /* Activity.swift */; };
 		300C599A26C9C1F60028667A /* ActivityItemCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300C599926C9C1F60028667A /* ActivityItemCollectionCell.xib */; };
+		300C599C26C9CEFD0028667A /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599B26C9CEFD0028667A /* ActivityService.swift */; };
+		300C599E26C9D2320028667A /* FreshStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599D26C9D2320028667A /* FreshStartManager.swift */; };
 		301FACF526C8E0F800B76761 /* StringValidationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FACF426C8E0F800B76761 /* StringValidationExtension.swift */; };
 		301FACF826C8E5D400B76761 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FACF726C8E5D400B76761 /* HomeViewController.swift */; };
 		301FAD0126C8E7F200B76761 /* MDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301FAD0026C8E7F200B76761 /* MDUser.swift */; };
@@ -80,6 +82,8 @@
 		300C599526C9BE8A0028667A /* ActivityItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemCollectionCell.swift; sourceTree = "<group>"; };
 		300C599726C9BEA20028667A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		300C599926C9C1F60028667A /* ActivityItemCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityItemCollectionCell.xib; sourceTree = "<group>"; };
+		300C599B26C9CEFD0028667A /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
+		300C599D26C9D2320028667A /* FreshStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreshStartManager.swift; sourceTree = "<group>"; };
 		301FACF426C8E0F800B76761 /* StringValidationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringValidationExtension.swift; sourceTree = "<group>"; };
 		301FACF726C8E5D400B76761 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		301FAD0026C8E7F200B76761 /* MDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDUser.swift; sourceTree = "<group>"; };
@@ -330,6 +334,8 @@
 				30DCD95F26C8C8C800E70EF1 /* SignUpService.swift */,
 				30DCD96126C8C8F500E70EF1 /* LoginService.swift */,
 				308C965B26C8FADC00425CDF /* MyDayService.swift */,
+				300C599B26C9CEFD0028667A /* ActivityService.swift */,
+				300C599D26C9D2320028667A /* FreshStartManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -662,9 +668,11 @@
 				308C965C26C8FADC00425CDF /* MyDayService.swift in Sources */,
 				30DCD96B26C8CC3000E70EF1 /* StoryBoardInit.swift in Sources */,
 				308C965A26C8FA9100425CDF /* MyDayViewModel.swift in Sources */,
+				300C599C26C9CEFD0028667A /* ActivityService.swift in Sources */,
 				300C599626C9BE8A0028667A /* ActivityItemCollectionCell.swift in Sources */,
 				30DCD95C26C8C4FD00E70EF1 /* ServiceProvider.swift in Sources */,
 				30DCD96726C8CA7A00E70EF1 /* SignUpViewController.swift in Sources */,
+				300C599E26C9D2320028667A /* FreshStartManager.swift in Sources */,
 				30C40B5D26C9802A00FBE5E6 /* SignUpCoordinator.swift in Sources */,
 				30DCD96026C8C8C800E70EF1 /* SignUpService.swift in Sources */,
 				30C40B5B26C97E0600FBE5E6 /* Application.swift in Sources */,

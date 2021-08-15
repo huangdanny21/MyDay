@@ -8,6 +8,7 @@
 import Foundation
 
 class AuthCredentials {
+    var username: String?
     var email: String?
     var password: String?
 }

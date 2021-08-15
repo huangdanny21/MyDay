@@ -15,12 +15,7 @@ final class SignUpViewModel: ViewModel {
     private lazy var service: SignUpService = {
         return SignUpServiceProvider()
     }()
-    
-    // MARK: - Constructor
-    
-    init() {
         
-    }
     
     // MARK: - Service
     
@@ -32,8 +27,8 @@ final class SignUpViewModel: ViewModel {
         return service.signUpUsingGoogle(withConfiguration: configuration, parentVC: parentVC, completion: completion)
     }
     
-    func addNewUser(withUsername authUser: AuthDataResult) {
-        service.addNewUserToDB(with: authUser)
+    func addNewUser(withUser authUser: AuthDataResult, displayName: String?) {
+        service.addNewUserToDB(withAuth: authUser, displayName: displayName)
     }
 }
 

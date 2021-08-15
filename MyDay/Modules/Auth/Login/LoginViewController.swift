@@ -27,7 +27,6 @@ class LoginViewController: UIViewController, View, StoryBoardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Login"
     }
     
     // MARK: - IBAction

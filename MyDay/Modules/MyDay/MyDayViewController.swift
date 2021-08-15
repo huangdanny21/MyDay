@@ -36,6 +36,8 @@ final class MyDayViewController: UIViewController, StoryBoardInit, View {
                 return MyDayCollectionViewLayout.diarySection()
             case .media:
                 return MyDayCollectionViewLayout.mediaSection()
+            case .health:
+                return MyDayCollectionViewLayout.healthSection()
             case .none:
                 return nil
             }

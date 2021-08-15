@@ -64,9 +64,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="T65-uF-wvM">
-                                <rect key="frame" x="107" y="329.5" width="200" height="247"/>
+                                <rect key="frame" x="107" y="296" width="200" height="314"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGZ-s2-AP9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DisplayName -Optional" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGZ-s2-AP9">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Vv1-Ma-PF8"/>
@@ -74,8 +74,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCT-a2-lV3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dud-Hv-bbW">
                                         <rect key="frame" x="0.0" y="67" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="cdN-mi-2Co"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCT-a2-lV3">
+                                        <rect key="frame" x="0.0" y="134" width="200" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="YHD-0N-Sga"/>
                                         </constraints>
@@ -83,14 +91,14 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-03-EH6">
-                                        <rect key="frame" x="75" y="134" width="50" height="30"/>
+                                        <rect key="frame" x="75" y="201" width="50" height="30"/>
                                         <state key="normal" title="SignUp"/>
                                         <connections>
                                             <action selector="signUpWithSender:" destination="5yE-8N-udC" eventType="primaryActionTriggered" id="dUP-HT-bxl"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMR-uO-xog" customClass="GIDSignInButton">
-                                        <rect key="frame" x="0.0" y="197" width="200" height="50"/>
+                                        <rect key="frame" x="0.0" y="264" width="200" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Gss-r0-dcM"/>
@@ -114,9 +122,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="eb8-D8-ub1"/>
                     <connections>
-                        <outlet property="emailTextField" destination="JGZ-s2-AP9" id="n7g-oL-tuu"/>
+                        <outlet property="emailTextField" destination="dud-Hv-bbW" id="lmk-sp-gBN"/>
                         <outlet property="googleLoginButton" destination="rMR-uO-xog" id="Cko-Ag-ths"/>
                         <outlet property="passwordTextField" destination="LCT-a2-lV3" id="FXs-8o-9Qg"/>
+                        <outlet property="usernameTextField" destination="JGZ-s2-AP9" id="DJ4-wj-NZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogE-lM-gcB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -134,10 +143,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="njv-64-ODl">
                                 <rect key="frame" x="107" y="371" width="200" height="164"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XsP-qf-Jcz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUO-LR-6pB">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="sur-iK-yvF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="uJ9-8d-DIJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
@@ -151,16 +160,13 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxv-r6-Zkk">
-                                        <rect key="frame" x="75" y="134" width="50" height="30"/>
+                                        <rect key="frame" x="81" y="134" width="38" height="30"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginWithSender:" destination="ihL-fB-Wjt" eventType="primaryActionTriggered" id="ydA-54-sQx"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Wxv-r6-Zkk" firstAttribute="width" secondItem="XsP-qf-Jcz" secondAttribute="width" multiplier="0.25" id="30m-yW-7O6"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="enQ-xC-JLz"/>
@@ -172,7 +178,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mNE-yd-cT8"/>
                     <connections>
-                        <outlet property="emailTextField" destination="XsP-qf-Jcz" id="E1Z-LL-NtS"/>
+                        <outlet property="emailTextField" destination="yUO-LR-6pB" id="ak0-8V-XId"/>
                         <outlet property="passwordTextField" destination="oYe-PB-6jV" id="Rty-dN-DkP"/>
                     </connections>
                 </viewController>

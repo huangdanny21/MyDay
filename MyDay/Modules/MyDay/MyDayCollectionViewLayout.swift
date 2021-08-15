@@ -39,4 +39,8 @@ class MyDayCollectionViewLayout {
     class func mediaSection() -> NSCollectionLayoutSection? {
         return nil
     }
+    
+    class func healthSection() -> NSCollectionLayoutSection? {
+        return nil
+    }
 }
