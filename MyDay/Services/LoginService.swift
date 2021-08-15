@@ -13,7 +13,7 @@ protocol LoginService: ServiceProvider {
 
 final class LoginServiceProvider: LoginService {
     func login(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback) {
-        return Auth.auth().createUser(withEmail: email, password: password, completion: completion)
+        return Auth.auth().signIn(withEmail: email, password: password, completion: completion)
     }
 }
 
