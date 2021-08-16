@@ -35,7 +35,6 @@ final class SignUpCoordinator: Coordinate {
         return navigationController
     }()
     
-    
     func showScreen(_ screen: RootCoordinator.Screen) {
         switch screen {
         case .auth:

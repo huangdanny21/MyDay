@@ -222,6 +222,7 @@
 		301FACFF26C8E7E700B76761 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				300C599D26C9D2320028667A /* FreshStartManager.swift */,
 				30C40B5A26C97E0600FBE5E6 /* Application.swift */,
 				301FAD0026C8E7F200B76761 /* MDUser.swift */,
 			);
@@ -335,7 +336,6 @@
 				30DCD96126C8C8F500E70EF1 /* LoginService.swift */,
 				308C965B26C8FADC00425CDF /* MyDayService.swift */,
 				300C599B26C9CEFD0028667A /* ActivityService.swift */,
-				300C599D26C9D2320028667A /* FreshStartManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

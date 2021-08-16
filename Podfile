@@ -12,6 +12,7 @@ target 'MyDay' do
   pod "CDAlertView"
   pod 'Firebase/Database'
   pod 'GoogleSignIn'
+  pod 'FirebaseFirestoreSwift'
   target 'MyDayTests' do
     inherit! :search_paths
     # Pods for testing

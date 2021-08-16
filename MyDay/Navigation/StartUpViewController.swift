@@ -18,6 +18,14 @@ class StartUpViewController: UIViewController, StoryBoardInit {
         super.viewDidLoad()
         if Auth.auth().currentUser != nil {
           // User is signed in.
+            ActivityServiceProvider().retrieveCommonActivities { result in
+                switch result {
+                case .success(let items):
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
             performSegue(withIdentifier: SegueConstant.Auth.toHome, sender: nil)
         } else {
           // No user is signed in.
