@@ -61,7 +61,6 @@ class SignUpViewController: UIViewController, StoryBoardInit ,View {
                 CDAlertView(title: "Sign up Error", message: err.localizedDescription, type: .notification).show()
             } else {
                 print("Sign Up Succeeded")
-                self.viewModel.addNewUser(withUser: result!, displayName: self.usernameTextField?.text ?? "")
                 self.viewModel.coordinator?.showScreen(RootCoordinator.Screen.home)
             }
         }

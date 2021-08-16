@@ -16,16 +16,16 @@ class StartUpViewController: UIViewController, StoryBoardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Auth.auth().currentUser != nil {
-          // User is signed in.
-            ActivityServiceProvider().retrieveCommonActivities { result in
-                switch result {
-                case .success(let items):
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
+        ActivityServiceProvider().retrieveCommonActivities { result in
+            switch result {
+            case .success(let items):
+                print(items)
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
             }
+        }
+        if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: SegueConstant.Auth.toHome, sender: nil)
         } else {
           // No user is signed in.

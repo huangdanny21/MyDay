@@ -47,7 +47,7 @@ enum Activities: Int, CaseIterable {
     }
 }
  
-struct Activity: ActivityItem {
+struct Activity: Codable, ActivityItem {
     var imageUrl: String
     var title: String
 }

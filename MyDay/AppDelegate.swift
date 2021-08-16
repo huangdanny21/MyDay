@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        MDUser.shared
+        let _ = Firestore.firestore()
+        let _ = MDUser.shared
         window = UIWindow(frame: UIScreen.main.bounds)
         Application.current.root(in: window)
         window?.makeKeyAndVisible()

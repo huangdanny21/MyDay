@@ -7,6 +7,7 @@
 
 import Firebase
 import GoogleSignIn
+import FirebaseFirestoreSwift
 
 enum ServiceErrors: Error {
     case networkError(Error)
@@ -14,25 +15,12 @@ enum ServiceErrors: Error {
     case noData
 }
 
-
 protocol SignUpService: ServiceProvider {
     func createNewUser(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback)
     func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, ServiceErrors>) -> Void)
-    func addNewUserToDB(withAuth auth: AuthDataResult, displayName: String?)
 }
 
 final class SignUpServiceProvider: SignUpService {
-    func addNewUserToDB(withAuth auth: AuthDataResult, displayName: String?) {
-        let name = displayName ?? auth.user.displayName ?? auth.user.email ?? ""
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = name
-        changeRequest?.commitChanges { error in
-            if error == nil {
-                let ref = Database.database().reference()
-                ref.child("Users").child(auth.user.uid).setValue(["username": name])
-            }
-        }
-    }
     
     func createNewUser(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback) {
         return Auth.auth().createUser(withEmail: email, password: password, completion: completion)

@@ -10,8 +10,8 @@ target 'MyDay' do
   pod 'Firebase/Auth'
   pod 'NVActivityIndicatorView'
   pod "CDAlertView"
-  pod 'Firebase/Database'
   pod 'GoogleSignIn'
+  pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   target 'MyDayTests' do
     inherit! :search_paths
