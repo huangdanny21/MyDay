@@ -51,6 +51,7 @@ final class MyDayViewController: UIViewController, StoryBoardInit, View {
         super.viewDidLoad()
         title = "My Day"
         setUpCollectionView()
+        
     }
     
     // MARK: - UI

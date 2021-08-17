@@ -16,15 +16,6 @@ class StartUpViewController: UIViewController, StoryBoardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ActivityServiceProvider().retrieveCommonActivities { result in
-            switch result {
-            case .success(let items):
-                print(items)
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: SegueConstant.Auth.toHome, sender: nil)
         } else {
