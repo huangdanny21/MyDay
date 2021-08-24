@@ -13,7 +13,7 @@ target 'MyDay' do
   pod 'GoogleSignIn'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
-
+  pod 'SVProgressHUD', '~> 2.2'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
 

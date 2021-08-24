@@ -12,7 +12,18 @@ final class StartUpViewModel: ViewModel {
     var model: AuthCredentials?
     
     var coordinator: StartUpCoordinator?
-
+    struct Input {
+        
+    }
+    
+    struct Output {
+        
+    }
+    
+    func transform(input: Input) -> Output {
+        return Output()
+    }
+    
     // MARK: - Constructor
     
     init() {

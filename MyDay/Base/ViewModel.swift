@@ -13,10 +13,13 @@ protocol View {
 }
 
 protocol ViewModel {
+    associatedtype Input
+    associatedtype Output
     associatedtype CoordinatorType: Coordinate
     var coordinator: CoordinatorType? { get set }
     init()
     init(withCoordinator coordinator: CoordinatorType)
+    func transform(input: Input) -> Output
 }
 
 extension ViewModel {

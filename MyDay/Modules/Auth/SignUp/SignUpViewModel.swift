@@ -9,6 +9,18 @@ import Firebase
 import GoogleSignIn
 
 final class SignUpViewModel: ViewModel {
+    struct Input {
+        
+    }
+    
+    struct Output {
+        
+    }
+    
+    func transform(input: Input) -> Output {
+        return Output()
+    }
+    
     var model: AuthCredentials?
     
     var coordinator: SignUpCoordinator?

@@ -9,6 +9,18 @@ import Firebase
 import UIKit
 
 final class MyDayViewModel: ViewModel {
+    
+    struct Input {
+        
+    }
+    
+    struct Output {
+        
+    }
+    
+    func transform(input: Input) -> Output {
+        return Output()
+    }
     var model: MyDay?
     var coordinator: MyDayCoordinator?
     

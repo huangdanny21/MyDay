@@ -23,6 +23,12 @@
 		30257E4826C8BC2800D273DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30257E4626C8BC2800D273DC /* LaunchScreen.storyboard */; };
 		30257E5326C8BC2800D273DC /* MyDayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E5226C8BC2800D273DC /* MyDayTests.swift */; };
 		30257E5E26C8BC2800D273DC /* MyDayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30257E5D26C8BC2800D273DC /* MyDayUITests.swift */; };
+		302E63CC26D4B0A000451B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E63CB26D4B0A000451B21 /* ViewController.swift */; };
+		302E63CE26D4B0BD00451B21 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E63CD26D4B0BD00451B21 /* NavigationController.swift */; };
+		302E63D026D4B0F500451B21 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E63CF26D4B0F500451B21 /* TableViewCell.swift */; };
+		302E63D326D4B26E00451B21 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E63D226D4B26E00451B21 /* Driver.swift */; };
+		302E63D526D4B27D00451B21 /* RxError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E63D426D4B27D00451B21 /* RxError.swift */; };
+		302E63D726D4B29100451B21 /* RxIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E63D626D4B29100451B21 /* RxIndicator.swift */; };
 		307BBDB226C9876F00D01D54 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB126C9876F00D01D54 /* HomeViewModel.swift */; };
 		307BBDB626C987C400D01D54 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB526C987C400D01D54 /* AuthViewModel.swift */; };
 		307BBDB826C987D700D01D54 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307BBDB726C987D700D01D54 /* AuthCoordinator.swift */; };
@@ -106,6 +112,12 @@
 		30257E5926C8BC2800D273DC /* MyDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30257E5D26C8BC2800D273DC /* MyDayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayUITests.swift; sourceTree = "<group>"; };
 		30257E5F26C8BC2800D273DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		302E63CB26D4B0A000451B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		302E63CD26D4B0BD00451B21 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		302E63CF26D4B0F500451B21 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		302E63D226D4B26E00451B21 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		302E63D426D4B27D00451B21 /* RxError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxError.swift; sourceTree = "<group>"; };
+		302E63D626D4B29100451B21 /* RxIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxIndicator.swift; sourceTree = "<group>"; };
 		307BBDB126C9876F00D01D54 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		307BBDB526C987C400D01D54 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		307BBDB726C987D700D01D54 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -311,6 +323,9 @@
 				30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */,
 				30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */,
 				30C40B5326C9776B00FBE5E6 /* Coordinate.swift */,
+				302E63CB26D4B0A000451B21 /* ViewController.swift */,
+				302E63CD26D4B0BD00451B21 /* NavigationController.swift */,
+				302E63CF26D4B0F500451B21 /* TableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -335,6 +350,7 @@
 		30257E6F26C8BD8000D273DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				302E63D126D4B23700451B21 /* Reactive */,
 				301FACF426C8E0F800B76761 /* StringValidationExtension.swift */,
 				30D53E1E26D49F3200AF811B /* JsonSchemaSupport.swift */,
 				30D53E2026D4A1D100AF811B /* UIColor+Extensions.swift */,
@@ -353,6 +369,16 @@
 				300C599B26C9CEFD0028667A /* ActivityService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		302E63D126D4B23700451B21 /* Reactive */ = {
+			isa = PBXGroup;
+			children = (
+				302E63D226D4B26E00451B21 /* Driver.swift */,
+				302E63D426D4B27D00451B21 /* RxError.swift */,
+				302E63D626D4B29100451B21 /* RxIndicator.swift */,
+			);
+			path = Reactive;
 			sourceTree = "<group>";
 		};
 		308C965426C8F7F400425CDF /* MyDay */ = {
@@ -714,23 +740,27 @@
 				30C40B5426C9776B00FBE5E6 /* Coordinate.swift in Sources */,
 				30D53E1326D495FE00AF811B /* JSONLoader.swift in Sources */,
 				30D53E1C26D4987C00AF811B /* App.Error.swift in Sources */,
+				302E63D726D4B29100451B21 /* RxIndicator.swift in Sources */,
 				30D53E2126D4A1D100AF811B /* UIColor+Extensions.swift in Sources */,
 				307BBDB626C987C400D01D54 /* AuthViewModel.swift in Sources */,
 				30DCD97626C8D4B000E70EF1 /* AuthCredentials.swift in Sources */,
 				30257E4026C8BC2600D273DC /* AuthViewController.swift in Sources */,
 				30C40B6126C984FF00FBE5E6 /* MyDayCoordinator.swift in Sources */,
 				30DCD96926C8CA8300E70EF1 /* LoginViewController.swift in Sources */,
+				302E63CE26D4B0BD00451B21 /* NavigationController.swift in Sources */,
 				30257E3C26C8BC2600D273DC /* AppDelegate.swift in Sources */,
 				30DCD97426C8D49C00E70EF1 /* LoginViewModel.swift in Sources */,
 				301FACF826C8E5D400B76761 /* HomeViewController.swift in Sources */,
 				30C40B5F26C9821900FBE5E6 /* LoginCoordinator.swift in Sources */,
 				30D53E2326D4A1E200AF811B /* UIImageView+Extensions.swift in Sources */,
 				30D53E2526D4A20700AF811B /* UIDevice+Extensions.swift in Sources */,
+				302E63CC26D4B0A000451B21 /* ViewController.swift in Sources */,
 				308C965826C8FA7B00425CDF /* MyDay.swift in Sources */,
 				307BBDBC26C9964800D01D54 /* StartUpViewModel.swift in Sources */,
 				307BBDBE26C9965500D01D54 /* StartUpCoordinator.swift in Sources */,
 				301FAD0126C8E7F200B76761 /* MDUserManager.swift in Sources */,
 				300C599826C9BEA20028667A /* Activity.swift in Sources */,
+				302E63D526D4B27D00451B21 /* RxError.swift in Sources */,
 				300C599326C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift in Sources */,
 				308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */,
 				30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */,
@@ -738,8 +768,10 @@
 				307BBDB826C987D700D01D54 /* AuthCoordinator.swift in Sources */,
 				30C40B5926C97C7B00FBE5E6 /* App.swift in Sources */,
 				30DCD96F26C8CD2600E70EF1 /* SignUpViewModel.swift in Sources */,
+				302E63D326D4B26E00451B21 /* Driver.swift in Sources */,
 				30D53E2826D4A2AF00AF811B /* App.Segues.swift in Sources */,
 				307BBDB226C9876F00D01D54 /* HomeViewModel.swift in Sources */,
+				302E63D026D4B0F500451B21 /* TableViewCell.swift in Sources */,
 				30DCD96226C8C8F500E70EF1 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
