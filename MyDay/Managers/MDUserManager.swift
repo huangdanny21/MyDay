@@ -7,8 +7,8 @@
 
 import Firebase
 
-class MDUser {
-    static let shared = MDUser()
+class MDUserManager {
+    static let shared = MDUserManager()
     private var handle: Auth?
     
     var user: User? {

@@ -13,33 +13,30 @@ protocol View {
 }
 
 protocol ViewModel {
-    associatedtype Model
     associatedtype CoordinatorType: Coordinate
-    var model: Model? { get set }
     var coordinator: CoordinatorType? { get set }
     init()
-    init(withModel model: Model, coordinator: CoordinatorType)
+    init(withCoordinator coordinator: CoordinatorType)
 }
 
 extension ViewModel {
-    init(withModel model: Model, coordinator: CoordinatorType) {
+    init(withCoordinator coordinator: CoordinatorType) {
         self.init()
-        self.model = model
         self.coordinator = coordinator
     }
 }
 
 extension View where Self: StoryBoardInit & UIViewController {
-    static func instantiateFromStoryBoard<T, C>(withModel model: T, coordinator: C) -> Self
-    where T == Self.ViewModelType.Model, C == Self.ViewModelType.CoordinatorType {
+    static func instantiateFromStoryBoard<C>(coordinator: C) -> Self
+    where C == Self.ViewModelType.CoordinatorType {
         var viewController = Self.makeFromStoryboard()
-        viewController.viewModel = ViewModelType(withModel: model, coordinator: coordinator)
+        viewController.viewModel = ViewModelType(withCoordinator: coordinator)
         return viewController
     }
-    static func instantiateFromNib<T, C>(withModel model: T, coordinator: C, withNibName nibName: String?, withBundle bundle: Bundle?) -> Self
-    where T == Self.ViewModelType.Model, C == Self.ViewModelType.CoordinatorType {
+    static func instantiateFromNib<C>(coordinator: C, withNibName nibName: String?, withBundle bundle: Bundle?) -> Self
+    where C == Self.ViewModelType.CoordinatorType {
         var viewController = Self.makeFromNib(withNibName: nibName, withBundle: bundle)
-        viewController.viewModel = ViewModelType(withModel: model, coordinator: coordinator)
+        viewController.viewModel = ViewModelType(withCoordinator: coordinator)
         return viewController
     }
 }

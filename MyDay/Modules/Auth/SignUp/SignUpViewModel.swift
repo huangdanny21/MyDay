@@ -16,14 +16,13 @@ final class SignUpViewModel: ViewModel {
         return SignUpServiceProvider()
     }()
         
-    
     // MARK: - Service
     
     func signUp(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback) {
         return service.createNewUser(withEmail: email, password: password, completion: completion)
     }
     
-    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, ServiceErrors>) -> Void) {
+    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, App.ServiceError>) -> Void) {
         return service.signUpUsingGoogle(withConfiguration: configuration, parentVC: parentVC, completion: completion)
     }
 }

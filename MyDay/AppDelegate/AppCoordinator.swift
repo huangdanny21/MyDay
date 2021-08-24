@@ -18,7 +18,7 @@ final class RootCoordinator: Coordinate {
     
     private lazy var homeViewController: UIViewController = {
         let coordinator = HomeCoordinator()
-        let vc = HomeViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        let vc = HomeViewController.instantiateFromStoryBoard(coordinator: coordinator)
         coordinator.viewController = vc
         let navigationController = UINavigationController(rootViewController: vc)
         return navigationController
@@ -26,7 +26,7 @@ final class RootCoordinator: Coordinate {
     
     private lazy var authViewController: UIViewController = {
         let coordinator = AuthCoordinator()
-        let vc = AuthViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        let vc = AuthViewController.instantiateFromStoryBoard(coordinator: coordinator)
         coordinator.viewController = vc
         let navigationController = UINavigationController(rootViewController: vc)
         return navigationController

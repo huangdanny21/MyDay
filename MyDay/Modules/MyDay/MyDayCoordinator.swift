@@ -8,11 +8,9 @@
 import Foundation
 
 final class MyDayCoordinator: Coordinate {
-    typealias Screen = LoginViewController
-
-    var viewController: MyDayViewController?
+    weak var viewController: MyDayViewController?
     
-    func showScreen(_ screen: Screen) {
+    func showScreen(_ screen: RootCoordinator.Screen) {
         
     }
 }

@@ -10,5 +10,8 @@ import Foundation
 extension App {
     enum ServiceError: Error {
         case noJson
+        case networkError(Error)
+        case invalidToken
+        case noData
     }
 }

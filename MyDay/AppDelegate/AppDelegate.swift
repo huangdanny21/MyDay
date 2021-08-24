@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         let _ = Firestore.firestore()
-        let _ = MDUser.shared
+        let _ = MDUserManager.shared
         window = UIWindow(frame: UIScreen.main.bounds)
         Application.current.root(in: window)
         window?.makeKeyAndVisible()

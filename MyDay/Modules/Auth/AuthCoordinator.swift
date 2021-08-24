@@ -8,11 +8,11 @@
 import UIKit
 
 final class AuthCoordinator: Coordinate {
-    var viewController: AuthViewController?
+    weak var viewController: AuthViewController?
     
     private lazy var signUpViewController: UIViewController = {
         let coordinator = SignUpCoordinator()
-        let vc = SignUpViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        let vc = SignUpViewController.instantiateFromStoryBoard(coordinator: coordinator)
         coordinator.viewController = vc
         let navigationController = UINavigationController(rootViewController: vc)
         return navigationController
@@ -20,7 +20,7 @@ final class AuthCoordinator: Coordinate {
     
     private lazy var loginViewController: UIViewController = {
         let coordinator = LoginCoordinator()
-        let vc = LoginViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        let vc = LoginViewController.instantiateFromStoryBoard(coordinator: coordinator)
         coordinator.viewController = vc
         let navigationController = UINavigationController(rootViewController: vc)
         return navigationController

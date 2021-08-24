@@ -6,13 +6,8 @@
 //
 
 import UIKit
- 
-protocol ActivityItem {
-    var imageUrl: String {get set}
-    var title: String { get set }
-}
 
-enum Activities: Int, CaseIterable {
+enum Activities: Int, CaseIterable, Codable {
     case social
     case hobbies
     case sleep
@@ -47,7 +42,7 @@ enum Activities: Int, CaseIterable {
     }
 }
  
-struct Activity: Codable, ActivityItem {
-    var imageUrl: String
-    var title: String
+struct Activity: Codable {
+    let imageUrl: String
+    let title: String
 }

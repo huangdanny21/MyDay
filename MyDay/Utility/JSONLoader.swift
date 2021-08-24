@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 final class JSONLoader {
     func readLocalFile(forName name: String) -> Data? {
         do {

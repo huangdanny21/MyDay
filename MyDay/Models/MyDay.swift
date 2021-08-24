@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum MoodLevel {
+enum MoodLevel: Int, Codable {
     case happy
     case sad
     case neutural
     case none
 }
 
-class MyDay {
+class MyDay: Codable {
     var numberRatings = 0
     var moodLevel = MoodLevel.none
     var didCompleteTodaysTask = false

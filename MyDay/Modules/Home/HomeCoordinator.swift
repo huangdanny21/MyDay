@@ -9,11 +9,11 @@ import UIKit
 
 final class HomeCoordinator: Coordinate {
 
-    var viewController: HomeViewController?
+    weak var viewController: HomeViewController?
     
     private lazy var authViewController: UIViewController = {
         let coordinator = AuthCoordinator()
-        let vc = AuthViewController.instantiateFromStoryBoard(withModel: AuthCredentials(), coordinator: coordinator)
+        let vc = AuthViewController.instantiateFromStoryBoard(coordinator: coordinator)
         coordinator.viewController = vc
         let navigationController = UINavigationController(rootViewController: vc)
         return navigationController

@@ -9,7 +9,7 @@ import Firebase
 
 final class StartUpCoordinator: Coordinate {
 
-    var viewController: StartUpViewController?
+    weak var viewController: StartUpViewController?
     
     func showScreen(_ screen: RootCoordinator.Screen) {
         

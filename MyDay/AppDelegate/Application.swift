@@ -5,8 +5,6 @@
 //  Created by Danny Huang on 8/15/21.
 //
 
-import Foundation
-
 import UIKit
 
 final class Application {

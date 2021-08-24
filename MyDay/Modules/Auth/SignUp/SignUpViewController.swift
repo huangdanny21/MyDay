@@ -17,7 +17,6 @@ class SignUpViewController: UIViewController, StoryBoardInit ,View {
     static var storyboardBundle: Bundle? { return Bundle.main }
     static var storyboardIdentifier: String? { return "SignUpViewController" }
     
-    
     @IBOutlet private weak var usernameTextField: UITextField?
     @IBOutlet private weak var emailTextField: UITextField?
     @IBOutlet private weak var passwordTextField: UITextField?

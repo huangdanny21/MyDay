@@ -29,7 +29,7 @@ final class ActivityServiceProvider: ActivityService {
                     // A nil value was successfully initialized from the DocumentSnapshot,
                     // or the DocumentSnapshot was nil.
                     print("Document does not exist")
-                    completion(.failure(ServiceErrors.noData))
+                    completion(.failure(App.ServiceError.noData))
                 }
             case .failure(let error):
                 print("Error decoding city: \(error)")

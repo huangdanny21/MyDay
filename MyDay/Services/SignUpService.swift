@@ -9,15 +9,9 @@ import Firebase
 import GoogleSignIn
 import FirebaseFirestoreSwift
 
-enum ServiceErrors: Error {
-    case networkError(Error)
-    case invalidToken
-    case noData
-}
-
 protocol SignUpService: ServiceProvider {
     func createNewUser(withEmail email: String, password: String, completion: @escaping AuthDataResultCallback)
-    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, ServiceErrors>) -> Void)
+    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, App.ServiceError>) -> Void)
 }
 
 final class SignUpServiceProvider: SignUpService {
@@ -26,11 +20,11 @@ final class SignUpServiceProvider: SignUpService {
         return Auth.auth().createUser(withEmail: email, password: password, completion: completion)
     }
     
-    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, ServiceErrors>) -> Void) {
+    func signUpUsingGoogle(withConfiguration configuration: GIDConfiguration, parentVC: UIViewController, completion: @escaping (Result<AuthCredential, App.ServiceError>) -> Void) {
         return GIDSignIn.sharedInstance.signIn(with: configuration, presenting: parentVC) { user, error in
             
             if let error = error {
-                completion(.failure(ServiceErrors.networkError(error)))
+                completion(.failure(.networkError(error)))
               return
             }
 
