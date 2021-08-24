@@ -50,6 +50,38 @@
             endingLineNumber = "20"
             landmarkName = "retrieveCommonActivities(withCompletion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D375777A-1671-48D9-9C5B-C27A83BC7E17 - 3ee37e5aed37bef2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDay.ActivityServiceProvider.retrieveCommonActivities(withCompletion: (Swift.Result&lt;MyDay.ActivityCollection, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MyDay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/MyDay/MyDay/Services/ActivityService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "403">
+               </Location>
+               <Location
+                  uuid = "D375777A-1671-48D9-9C5B-C27A83BC7E17 - 4a62e38a701f458e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MyDay.ActivityServiceProvider.retrieveCommonActivities(withCompletion: (Swift.Result&lt;MyDay.ActivityCollection, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MyDay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danny/MyDay/MyDay/Services/ActivityService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "307">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
