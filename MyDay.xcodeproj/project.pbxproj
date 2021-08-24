@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		300C599326C9B9960028667A /* MyDayCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599226C9B9960028667A /* MyDayCollectionViewLayout.swift */; };
+		300C599326C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599226C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift */; };
 		300C599626C9BE8A0028667A /* ActivityItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599526C9BE8A0028667A /* ActivityItemCollectionCell.swift */; };
 		300C599826C9BEA20028667A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599726C9BEA20028667A /* Activity.swift */; };
 		300C599A26C9C1F60028667A /* ActivityItemCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 300C599926C9C1F60028667A /* ActivityItemCollectionCell.xib */; };
@@ -84,7 +84,7 @@
 
 /* Begin PBXFileReference section */
 		04B58AB76A2166C68F75D80F /* Pods-MyDay-MyDayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDay-MyDayUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyDay-MyDayUITests/Pods-MyDay-MyDayUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		300C599226C9B9960028667A /* MyDayCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayCollectionViewLayout.swift; sourceTree = "<group>"; };
+		300C599226C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayCollectionViewLayoutFactory.swift; sourceTree = "<group>"; };
 		300C599526C9BE8A0028667A /* ActivityItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemCollectionCell.swift; sourceTree = "<group>"; };
 		300C599726C9BEA20028667A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		300C599926C9C1F60028667A /* ActivityItemCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityItemCollectionCell.xib; sourceTree = "<group>"; };
@@ -362,7 +362,7 @@
 				308C965526C8F80800425CDF /* MyDayViewController.swift */,
 				308C965926C8FA9100425CDF /* MyDayViewModel.swift */,
 				30C40B6026C984FF00FBE5E6 /* MyDayCoordinator.swift */,
-				300C599226C9B9960028667A /* MyDayCollectionViewLayout.swift */,
+				300C599226C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift */,
 			);
 			path = MyDay;
 			sourceTree = "<group>";
@@ -731,7 +731,7 @@
 				307BBDBE26C9965500D01D54 /* StartUpCoordinator.swift in Sources */,
 				301FAD0126C8E7F200B76761 /* MDUserManager.swift in Sources */,
 				300C599826C9BEA20028667A /* Activity.swift in Sources */,
-				300C599326C9B9960028667A /* MyDayCollectionViewLayout.swift in Sources */,
+				300C599326C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift in Sources */,
 				308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */,
 				30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */,
 				301FACF526C8E0F800B76761 /* StringValidationExtension.swift in Sources */,

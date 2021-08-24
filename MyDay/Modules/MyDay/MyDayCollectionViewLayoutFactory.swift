@@ -1,5 +1,5 @@
 //
-//  MyDayCollectionViewLayout.swift
+//  MyDayCollectionViewLayoutFactory.swift
 //  MyDay
 //
 //  Created by Danny Huang on 8/15/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyDayCollectionViewLayout {
+class MyDayCollectionViewLayoutFactory {
     class func socialSection() -> NSCollectionLayoutSection? {
         return nil
     }

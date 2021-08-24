@@ -21,23 +21,23 @@ final class MyDayViewController: UIViewController, StoryBoardInit, View {
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             switch Activities(rawValue: sectionIndex) {
             case .social:
-                return MyDayCollectionViewLayout.socialSection()
+                return MyDayCollectionViewLayoutFactory.socialSection()
             case .hobbies:
-                return MyDayCollectionViewLayout.hobbiesSection()
+                return MyDayCollectionViewLayoutFactory.hobbiesSection()
             case .sleep:
-                return MyDayCollectionViewLayout.sleepSection()
+                return MyDayCollectionViewLayoutFactory.sleepSection()
             case .food:
-                return MyDayCollectionViewLayout.foodSection()
+                return MyDayCollectionViewLayoutFactory.foodSection()
             case .betterMe:
-                return MyDayCollectionViewLayout.betterMeSection()
+                return MyDayCollectionViewLayoutFactory.betterMeSection()
             case .chores:
-                return MyDayCollectionViewLayout.choresSection()
+                return MyDayCollectionViewLayoutFactory.choresSection()
             case .diary:
-                return MyDayCollectionViewLayout.diarySection()
+                return MyDayCollectionViewLayoutFactory.diarySection()
             case .media:
-                return MyDayCollectionViewLayout.mediaSection()
+                return MyDayCollectionViewLayoutFactory.mediaSection()
             case .health:
-                return MyDayCollectionViewLayout.healthSection()
+                return MyDayCollectionViewLayoutFactory.healthSection()
             case .none:
                 return nil
             }
