@@ -9,19 +9,11 @@ import Firebase
 import FirebaseFirestore
 
 protocol ActivityService: ServiceProvider {
-    func writeNewActivitiesToDB(withData data: [String : [Activity]])
     func retrieveCommonActivities(withCompletion completion: @escaping (Result<ActivityCollection, Error>) -> Void)
 }
 
 final class ActivityServiceProvider: ActivityService {
     private let db = Firestore.firestore()
-    func writeNewActivitiesToDB(withData data: [String : [Activity]]) {
-        do {
-            try db.collection("Activities").document("BaseCollection").setData(from: data)
-        } catch let error {
-            print("Error writing city to Firestore: \(error)")
-        }
-    }
     
     func retrieveCommonActivities(withCompletion completion: @escaping (Result<ActivityCollection, Error>) -> Void) {
         let docRef = db.collection("Activities").document("BaseCollection")

@@ -16,6 +16,8 @@ class StartUpViewController: UIViewController, StoryBoardInit {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         if Auth.auth().currentUser != nil {
             performSegue(withIdentifier: SegueConstant.Auth.toHome, sender: nil)
         } else {
