@@ -13,7 +13,7 @@ class MDUserManager {
     
     var user: User? {
         didSet {
-            if let user = user {
+            if let _ = user {
                 print("User is logged in")
             }
         }

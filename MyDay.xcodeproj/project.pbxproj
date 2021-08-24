@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300BB98926D4B41400DF654B /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300BB98826D4B41400DF654B /* RxExtensions.swift */; };
 		300C599326C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599226C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift */; };
 		300C599626C9BE8A0028667A /* ActivityItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599526C9BE8A0028667A /* ActivityItemCollectionCell.swift */; };
 		300C599826C9BEA20028667A /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C599726C9BEA20028667A /* Activity.swift */; };
@@ -66,6 +67,10 @@
 		30DCD96F26C8CD2600E70EF1 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD96E26C8CD2600E70EF1 /* SignUpViewModel.swift */; };
 		30DCD97426C8D49C00E70EF1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD97326C8D49C00E70EF1 /* LoginViewModel.swift */; };
 		30DCD97626C8D4B000E70EF1 /* AuthCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD97526C8D4B000E70EF1 /* AuthCredentials.swift */; };
+		30FD0A1726D4B7C100838157 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD0A1626D4B7C100838157 /* DateFormatter.swift */; };
+		30FD0A1926D4B89000838157 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD0A1826D4B89000838157 /* DictionaryExtensions.swift */; };
+		30FD0A1B26D4B8A600838157 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD0A1A26D4B8A600838157 /* SequenceExtensions.swift */; };
+		30FD0A1D26D4B8B900838157 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FD0A1C26D4B8B900838157 /* DateExtensions.swift */; };
 		32CD795907646394246BCDE9 /* Pods_MyDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED5925A9B1BECF208F47E4 /* Pods_MyDay.framework */; };
 		389CB6E23AC87CB9BDCAEE7B /* Pods_MyDayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15759E44BE64416AF814D80 /* Pods_MyDayTests.framework */; };
 		8B41679EC0C1CA683C6404ED /* Pods_MyDay_MyDayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D8AB75DF6D07F696F4387E /* Pods_MyDay_MyDayUITests.framework */; };
@@ -90,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		04B58AB76A2166C68F75D80F /* Pods-MyDay-MyDayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDay-MyDayUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyDay-MyDayUITests/Pods-MyDay-MyDayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		300BB98826D4B41400DF654B /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
 		300C599226C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDayCollectionViewLayoutFactory.swift; sourceTree = "<group>"; };
 		300C599526C9BE8A0028667A /* ActivityItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityItemCollectionCell.swift; sourceTree = "<group>"; };
 		300C599726C9BEA20028667A /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -155,6 +161,10 @@
 		30DCD96E26C8CD2600E70EF1 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		30DCD97326C8D49C00E70EF1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		30DCD97526C8D4B000E70EF1 /* AuthCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCredentials.swift; sourceTree = "<group>"; };
+		30FD0A1626D4B7C100838157 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		30FD0A1826D4B89000838157 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
+		30FD0A1A26D4B8A600838157 /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
+		30FD0A1C26D4B8B900838157 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		38D8AB75DF6D07F696F4387E /* Pods_MyDay_MyDayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDay_MyDayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCFFD7052B99286B8BB7649 /* Pods-MyDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDay.debug.xcconfig"; path = "Target Support Files/Pods-MyDay/Pods-MyDay.debug.xcconfig"; sourceTree = "<group>"; };
 		42ED5925A9B1BECF208F47E4 /* Pods_MyDay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -318,14 +328,12 @@
 		30257E6B26C8BCAE00D273DC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				30FD0A1E26D4B8F700838157 /* Views */,
 				30C40B5826C97C7B00FBE5E6 /* App.swift */,
 				30DCD95B26C8C4FD00E70EF1 /* ServiceProvider.swift */,
 				30DCD96A26C8CC3000E70EF1 /* StoryBoardInit.swift */,
 				30DCD96C26C8CC5500E70EF1 /* ViewModel.swift */,
 				30C40B5326C9776B00FBE5E6 /* Coordinate.swift */,
-				302E63CB26D4B0A000451B21 /* ViewController.swift */,
-				302E63CD26D4B0BD00451B21 /* NavigationController.swift */,
-				302E63CF26D4B0F500451B21 /* TableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -356,6 +364,10 @@
 				30D53E2026D4A1D100AF811B /* UIColor+Extensions.swift */,
 				30D53E2226D4A1E200AF811B /* UIImageView+Extensions.swift */,
 				30D53E2426D4A20700AF811B /* UIDevice+Extensions.swift */,
+				30FD0A1626D4B7C100838157 /* DateFormatter.swift */,
+				30FD0A1826D4B89000838157 /* DictionaryExtensions.swift */,
+				30FD0A1A26D4B8A600838157 /* SequenceExtensions.swift */,
+				30FD0A1C26D4B8B900838157 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -377,6 +389,7 @@
 				302E63D226D4B26E00451B21 /* Driver.swift */,
 				302E63D426D4B27D00451B21 /* RxError.swift */,
 				302E63D626D4B29100451B21 /* RxIndicator.swift */,
+				300BB98826D4B41400DF654B /* RxExtensions.swift */,
 			);
 			path = Reactive;
 			sourceTree = "<group>";
@@ -469,6 +482,16 @@
 				300C599726C9BEA20028667A /* Activity.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		30FD0A1E26D4B8F700838157 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				302E63CB26D4B0A000451B21 /* ViewController.swift */,
+				302E63CD26D4B0BD00451B21 /* NavigationController.swift */,
+				302E63CF26D4B0F500451B21 /* TableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AAB11D52F32694CB8FE99982 /* Frameworks */ = {
@@ -721,6 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FD0A1726D4B7C100838157 /* DateFormatter.swift in Sources */,
 				30DCD96D26C8CC5500E70EF1 /* ViewModel.swift in Sources */,
 				308C965326C8F10E00425CDF /* StartUpViewController.swift in Sources */,
 				30D53E1F26D49F3200AF811B /* JsonSchemaSupport.swift in Sources */,
@@ -755,13 +779,17 @@
 				30D53E2326D4A1E200AF811B /* UIImageView+Extensions.swift in Sources */,
 				30D53E2526D4A20700AF811B /* UIDevice+Extensions.swift in Sources */,
 				302E63CC26D4B0A000451B21 /* ViewController.swift in Sources */,
+				30FD0A1926D4B89000838157 /* DictionaryExtensions.swift in Sources */,
 				308C965826C8FA7B00425CDF /* MyDay.swift in Sources */,
 				307BBDBC26C9964800D01D54 /* StartUpViewModel.swift in Sources */,
 				307BBDBE26C9965500D01D54 /* StartUpCoordinator.swift in Sources */,
 				301FAD0126C8E7F200B76761 /* MDUserManager.swift in Sources */,
 				300C599826C9BEA20028667A /* Activity.swift in Sources */,
 				302E63D526D4B27D00451B21 /* RxError.swift in Sources */,
+				300BB98926D4B41400DF654B /* RxExtensions.swift in Sources */,
 				300C599326C9B9960028667A /* MyDayCollectionViewLayoutFactory.swift in Sources */,
+				30FD0A1D26D4B8B900838157 /* DateExtensions.swift in Sources */,
+				30FD0A1B26D4B8A600838157 /* SequenceExtensions.swift in Sources */,
 				308C965626C8F80800425CDF /* MyDayViewController.swift in Sources */,
 				30257E3E26C8BC2600D273DC /* SceneDelegate.swift in Sources */,
 				301FACF526C8E0F800B76761 /* StringValidationExtension.swift in Sources */,

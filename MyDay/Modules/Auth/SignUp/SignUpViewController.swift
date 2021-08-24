@@ -71,7 +71,7 @@ class SignUpViewController: UIViewController, StoryBoardInit ,View {
         let config = GIDConfiguration(clientID: clientID)
         viewModel.signUpUsingGoogle(withConfiguration: config, parentVC: self) { result in
             switch result {
-            case .success(let credentials):
+            case .success(_):
                 //Going to home screen
                 self.viewModel.coordinator?.showScreen(RootCoordinator.Screen.home)
                 break

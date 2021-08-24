@@ -9,7 +9,7 @@ import UIKit
 
 extension Array where Element: Codable {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode([Element].self, from: data)
+        self = try JSONDecoder.shared.decode([Element].self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -24,7 +24,7 @@ extension Array where Element: Codable {
     }
 
     func jsonData() throws -> Data {
-        return try newJSONEncoder().encode(self)
+        return try JSONEncoder.shared.encode(self)
     }
 
     func jsonString(encoding: String.Encoding = .utf8) throws -> String? {
@@ -32,18 +32,18 @@ extension Array where Element: Codable {
     }
 }
 
-func newJSONDecoder() -> JSONDecoder {
-    let decoder = JSONDecoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        decoder.dateDecodingStrategy = .iso8601
-    }
-    return decoder
+extension JSONDecoder {
+    static let shared: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
+        return decoder
+    }()
 }
 
-func newJSONEncoder() -> JSONEncoder {
-    let encoder = JSONEncoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        encoder.dateEncodingStrategy = .iso8601
-    }
-    return encoder
+extension JSONEncoder {
+    static let shared: JSONEncoder = {
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .formatted(DateFormatter.iso8601)
+        return encoder
+    }()
 }

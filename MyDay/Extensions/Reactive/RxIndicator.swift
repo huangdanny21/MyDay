@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import NVActivityIndicatorView
+import SVProgressHUD
 
 final class RxIndicator: ObservableConvertibleType {
     private let _relay = BehaviorRelay(value: false)
@@ -22,7 +22,7 @@ final class RxIndicator: ObservableConvertibleType {
         return _loading.asObservable()
     }
 
-    fileprivate func track<O: ObservableConvertibleType>(_ source: O) -> Observable<O.E> {
+    fileprivate func track<O: ObservableConvertibleType>(_ source: O) -> Observable<O.Element> {
         return source.asObservable()
             .do(onNext: { _ in
                 self.dismiss()
@@ -35,7 +35,6 @@ final class RxIndicator: ObservableConvertibleType {
 
     private func show() {
         _relay.accept(true)
-        NVActivityIndicatorView()
         SVProgressHUD.show()
     }
 
@@ -47,7 +46,7 @@ final class RxIndicator: ObservableConvertibleType {
 
 // MARK: - ObservableConvertibleType
 extension ObservableConvertibleType {
-    func indicate(_ indicator: RxIndicator) -> Observable<E> {
+    func indicate(_ indicator: RxIndicator) -> Observable<Element> {
         return indicator.track(self)
     }
 }

@@ -20,7 +20,7 @@ final class RxError: ObservableConvertibleType {
         return _subject.asObservable()
     }
 
-    fileprivate func track<O: ObservableConvertibleType>(from source: O) -> Observable<O.E> {
+    fileprivate func track<O: ObservableConvertibleType>(from source: O) -> Observable<O.Element> {
         return source.asObservable().do(onError: { error in
             self._subject.onNext(error)
         })
@@ -29,7 +29,7 @@ final class RxError: ObservableConvertibleType {
 
 // MARK: - ObservableConvertibleType
 extension ObservableConvertibleType {
-    func trackError(into error: RxError) -> Observable<E> {
+    func trackError(into error: RxError) -> Observable<Element> {
         return error.track(from: self)
     }
 }

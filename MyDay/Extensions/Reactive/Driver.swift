@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 
 extension ObservableType {
-    func emptyDriverIfError() -> Driver<E> {
-        return asDriver { _ in return Driver<E>.empty() }
+    func emptyDriverIfError() -> Driver<Element> {
+        return asDriver { _ in return Driver<Element>.empty() }
     }
 
-    func emptyObservableIfError() -> Observable<E> {
-        return catchError { _ in return Observable<E>.empty() }
+    func emptyObservableIfError() -> Observable<Element> {
+        return catchError { _ in return Observable<Element>.empty() }
     }
 }
