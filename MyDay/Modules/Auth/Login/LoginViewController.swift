@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, View, StoryBoardInit {
     
     @IBOutlet private weak var emailTextField: UITextField?
     @IBOutlet private weak var passwordTextField: UITextField?
+    @IBOutlet private weak var loginButton: UIButton?
     
     private lazy var loadingIndicator: NVActivityIndicatorView = {
         return NVActivityIndicatorView(frame: view.frame)

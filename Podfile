@@ -16,6 +16,12 @@ target 'MyDay' do
   pod 'SVProgressHUD', '~> 2.2'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'RxFirebase/Firestore'
+  pod 'RxFirebase/RemoteConfig'
+  pod 'RxFirebase/Database'
+  pod 'RxFirebase/Storage'
+  pod 'RxFirebase/Auth'
+  pod 'RxFirebase/Functions'
 
   target 'MyDayTests' do
     inherit! :search_paths

@@ -93,9 +93,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Emq-03-EH6">
                                         <rect key="frame" x="75" y="201" width="50" height="30"/>
                                         <state key="normal" title="SignUp"/>
-                                        <connections>
-                                            <action selector="signUpWithSender:" destination="5yE-8N-udC" eventType="primaryActionTriggered" id="dUP-HT-bxl"/>
-                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMR-uO-xog" customClass="GIDSignInButton">
                                         <rect key="frame" x="0.0" y="264" width="200" height="50"/>
@@ -123,8 +120,9 @@
                     <navigationItem key="navigationItem" id="eb8-D8-ub1"/>
                     <connections>
                         <outlet property="emailTextField" destination="dud-Hv-bbW" id="lmk-sp-gBN"/>
-                        <outlet property="googleLoginButton" destination="rMR-uO-xog" id="Cko-Ag-ths"/>
+                        <outlet property="googleSignUpButton" destination="rMR-uO-xog" id="Cko-Ag-ths"/>
                         <outlet property="passwordTextField" destination="LCT-a2-lV3" id="FXs-8o-9Qg"/>
+                        <outlet property="signUpButon" destination="Emq-03-EH6" id="hbX-Dm-A5K"/>
                         <outlet property="usernameTextField" destination="JGZ-s2-AP9" id="DJ4-wj-NZA"/>
                     </connections>
                 </viewController>
@@ -179,6 +177,7 @@
                     <navigationItem key="navigationItem" id="mNE-yd-cT8"/>
                     <connections>
                         <outlet property="emailTextField" destination="yUO-LR-6pB" id="ak0-8V-XId"/>
+                        <outlet property="loginButton" destination="Wxv-r6-Zkk" id="xfa-3E-bXD"/>
                         <outlet property="passwordTextField" destination="oYe-PB-6jV" id="Rty-dN-DkP"/>
                     </connections>
                 </viewController>

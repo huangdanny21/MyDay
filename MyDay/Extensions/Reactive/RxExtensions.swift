@@ -4,13 +4,14 @@ import RxSwift
 import RxCocoa
 
 extension ObservableType where Element: OptionalType {
-    func filterNil() -> Observable<Element.Wrapped> {
-        return self.flatMap { element -> Observable<Element.Wrapped> in
-            guard let value = element.value else {
-                return Observable<Element.Wrapped>.empty()
-            }
-            return Observable<Element.Wrapped>.just(value)
-        }
+    /// Returns an Observable where the nil values from the original Observable are
+    /// skipped
+    func unwrappedOptional() -> Observable<Element.Wrapped> {
+        return self.filter { $0.value != nil }.map { $0.value! }
+    }
+    
+    func unwrappedOptionalAsDriver() -> Driver<Element.Wrapped> {
+        return self.filter { $0.value != nil }.map { $0.value! }.asDriver(onErrorJustReturn: "" as! Self.Element.Wrapped)
     }
 }
 
