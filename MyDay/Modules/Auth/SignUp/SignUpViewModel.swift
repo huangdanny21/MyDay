@@ -9,9 +9,8 @@ import Firebase
 import GoogleSignIn
 import RxSwift
 import RxCocoa
-import CDAlertView
 
- enum SignUpError: Error {
+enum SignUpError: Error {
     case invalidEmail
     case emailEmpty
     case passwordEmpty
@@ -73,7 +72,6 @@ extension SignUpViewModel {
     }
     
     struct Output {
-        let validationError: Driver<Error>
         let signUpError: Driver<Error>
         let signUpActive: Driver<Bool>
         let signUpResult: Driver<AuthDataResult>
@@ -90,28 +88,20 @@ extension SignUpViewModel {
                 return Driver.just(isActive)
             }
         
-        let validationError: Driver<Error> = emailAndPassword
-            .flatMapLatest { email, password -> Driver<Error> in
-                if email.isEmpty {
-                    return Driver.just(SignUpError.emailEmpty)
-                } else if password.isEmpty {
-                    return Driver.just(SignUpError.passwordEmpty)
-                } else {
-                    return Driver.empty()
-                }
+        let signUpResult: Driver<AuthDataResult> =
+            input.emailSignUp.flatMap { _ -> Driver<(String, String)> in
+                return emailAndPassword
             }
-        
-
-        let signUpResult: Driver<AuthDataResult> = emailAndPassword
-            .flatMapLatest { email, password -> Driver<AuthDataResult> in
+            .flatMapLatest { (email, password) -> Driver<AuthDataResult>  in
                 return self.service.createNewUser(withEmail: email, password: password).indicate(indicator).trackError(into: rxError).emptyDriverIfError()
             }
         
         let error = rxError.asObservable().do(onNext: { (error) in
+            print("Signup error: \(error.localizedDescription)")
             self.coordinator?.showError(error)
         }).emptyDriverIfError()
 
-        return Output(validationError: validationError, signUpError: error, signUpActive: buttonActive, signUpResult: signUpResult)
+        return Output(signUpError: error, signUpActive: buttonActive, signUpResult: signUpResult)
     }
 }
 
